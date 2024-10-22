@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Collectible : Collidable
+public class Collectable : Collidable
 {
     protected bool collected;
 

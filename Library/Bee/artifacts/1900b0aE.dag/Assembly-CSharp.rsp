@@ -375,7 +375,6 @@
 "Assets/Scripts/CameraMotor.cs"
 "Assets/Scripts/Chest.cs"
 "Assets/Scripts/Collectable.cs"
-"Assets/Scripts/Collectible.cs"
 "Assets/Scripts/Collidable.cs"
 "Assets/Scripts/GameManager.cs"
 "Assets/Scripts/player.cs"
