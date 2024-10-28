@@ -1176,7 +1176,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1197,7 +1197,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1205,6 +1205,27 @@ TextureImporter:
       bones: []
       spriteID: 06141db43cd7f74479ab5a1aaead7a74
       internalID: 452239482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bullet_large
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 113
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db5edf26437db4b47b4a84e44dcf3fa0
+      internalID: -427266638
       vertices: []
       indices: 
       edges: []
@@ -1223,6 +1244,7 @@ TextureImporter:
       HealingFountain_0: -1525482677
       HealingFountain_1: 15313635
       HealingFountain_2: -906132957
+      bullet_large: -427266638
       chest_0: 452239482
       chest_1: 455825428
       crate_0: -656800252
