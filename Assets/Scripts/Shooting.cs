@@ -6,7 +6,6 @@ public class Shooting : MonoBehaviour
 {
     private Camera Camera; //maybe make a separate camera for this?
     private Vector3 mousePosition;
-    private player player;
     public GameObject bullet;
     public Transform bulletTransform;
     public bool canFire;
@@ -16,7 +15,6 @@ public class Shooting : MonoBehaviour
     void Start()
     {
         Camera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
-
     }
 
     // Update is called once per frame
@@ -29,19 +27,6 @@ public class Shooting : MonoBehaviour
         //UnityEngine.Debug.Log(rotationZ);
         transform.rotation = Quaternion.Euler(0, 0, rotationZ);
 
-        if (rotationZ > 90 || rotationZ < -90)
-        {
-            //UnityEngine.Debug.Log("Sprite should rotate left");
-        }
-        else
-        {
-            //UnityEngine.Debug.Log("Sprite should rotate right");
-        }
-        //flip sprite when left or right
-        //if (moveDelta.x > 0)
-        //    transform.localScale = Vector3.one;
-        //else if (moveDelta.x < 0)
-        //    transform.localScale = new Vector3(-1, 1, 1);
 
         if (!canFire)
         {

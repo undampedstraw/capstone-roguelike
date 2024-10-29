@@ -9,6 +9,8 @@ public class BulletScript : MonoBehaviour
     private Rigidbody2D rb2D;
     public float speed;
     public float bulletLifetime; 
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +30,6 @@ public class BulletScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //check here if bullet collided with anything. if so, delete it early
     }
 }
