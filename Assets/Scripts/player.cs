@@ -15,7 +15,7 @@ public class player : MonoBehaviour
 
     private Vector3 mousePosition;
     private Camera Camera;
-    private SpriteRenderer spriteRenderer;
+    public SpriteRenderer spriteRenderer;
 
     private void Start()
     {
@@ -31,10 +31,7 @@ public class player : MonoBehaviour
 
         //reset move delta
         moveDelta = new Vector3(x, y, 0);
-        moveDelta.Normalize();
-
-        //flip sprite when left or right based on mouse position
-        flipSprite();   
+        moveDelta.Normalize(); 
 
         //collision detection: cast as box first then if box is null, then allow movement
         hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(0, moveDelta.y), Mathf.Abs(moveDelta.y * Time.deltaTime), LayerMask.GetMask("Actor", "Blocking"));
@@ -52,14 +49,5 @@ public class player : MonoBehaviour
             transform.Translate(moveDelta.x * Time.deltaTime, 0, 0);
         }
 
-    }
-
-    private void flipSprite()
-    {
-        mousePosition = Camera.ScreenToWorldPoint(Input.mousePosition);
-        Vector3 rotation = mousePosition - transform.position;
-
-        float rotationZ = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
-        spriteRenderer.flipX = rotationZ > 90 || rotationZ < -90;
     }
 }

@@ -12,9 +12,12 @@ public class Shooting : MonoBehaviour
     public float timer;
     public float timeBetweenFiring;
 
+    private player player;
+
     void Start()
     {
         Camera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        player = GameObject.Find("Player").GetComponent<player>();
     }
 
     // Update is called once per frame
@@ -27,6 +30,7 @@ public class Shooting : MonoBehaviour
         //UnityEngine.Debug.Log(rotationZ);
         transform.rotation = Quaternion.Euler(0, 0, rotationZ);
 
+        player.spriteRenderer.flipX = rotationZ > 90 || rotationZ < -90;
 
         if (!canFire)
         {
