@@ -14,6 +14,7 @@ public class Chest : Collectable
             collected = true;
             GetComponent<SpriteRenderer>().sprite = emptyChest;
             UnityEngine.Debug.Log("grant " + pesosAmount + " pesos.");
+            GameManager.instance.ShowText("+" + pesosAmount + " pesos!", 25, Color.yellow, transform.position, Vector3.up * 40, 1.5f);
         }
         /*base.OnCollect();
         UnityEngine.Debug.Log("grant pesos");*/
