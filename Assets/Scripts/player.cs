@@ -7,47 +7,14 @@ using System.Threading;
 using UnityEngine;
 
 //[RequireComponent(typeof(BoxCollider2D))]
-public class player : MonoBehaviour
+public class player : Mover
 {
-    private BoxCollider2D boxCollider;
-    private Vector3 moveDelta;
-    private RaycastHit2D hit;
-
-    private Vector3 mousePosition;
-    private Camera Camera;
-    public SpriteRenderer spriteRenderer;
-
-    private void Start()
-    {
-        boxCollider = GetComponent<BoxCollider2D>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        Camera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
-    }
-
     private void FixedUpdate()
-    { 
+    {
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
 
-        //reset move delta
-        moveDelta = new Vector3(x, y, 0);
-        moveDelta.Normalize(); 
-
-        //collision detection: cast as box first then if box is null, then allow movement
-        hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(0, moveDelta.y), Mathf.Abs(moveDelta.y * Time.deltaTime), LayerMask.GetMask("Actor", "Blocking"));
-        if(hit.collider == null)
-        {
-            //move sprite
-            transform.Translate(0, moveDelta.y * Time.deltaTime, 0);
-        }
-
-        //collision detection: cast as box first then if box is null, then allow movement
-        hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(moveDelta.x, 0), Mathf.Abs(moveDelta.x * Time.deltaTime), LayerMask.GetMask("Actor", "Blocking"));
-        if (hit.collider == null)
-        {
-            //move sprite
-            transform.Translate(moveDelta.x * Time.deltaTime, 0, 0);
-        }
+        UpdateMotor(new Vector3 (x, y, 0));
 
     }
 }
