@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletScript : Collidable
+public class BulletScript : MonoBehaviour
 {
     private Vector3 mousePosition;
     private Camera Camera;
@@ -12,9 +12,10 @@ public class BulletScript : Collidable
 
 
     // Start is called before the first frame update
-    protected override void Start()
+    //protected override void Start()
+    private void Start()
     {
-        base.Start();
+        //base.Start();
         Camera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         rb2D = GetComponent<Rigidbody2D>();
         mousePosition = Camera.ScreenToWorldPoint(Input.mousePosition);
@@ -29,9 +30,9 @@ public class BulletScript : Collidable
     }
 
     // Update is called once per frame
-    protected override void Update()
-    {
-        base.Update();
-        //check here if bullet collided with anything. if so, delete it early
-    }
+    //protected override void Update()
+    //{
+    //    base.Update();
+    //    //check here if bullet collided with anything. if so, delete it early
+    //}
 }

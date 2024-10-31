@@ -15,11 +15,13 @@ public class MeleeWeapon : Collidable
     //swing sword
     private float cooldown = 0.5f;
     private float lastSwing;
+    private Animator anim;
 
     protected override void Start()
     {
         base.Start();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
     }
 
     protected override void Update()
@@ -58,6 +60,6 @@ public class MeleeWeapon : Collidable
 
     private void Swing()
     {
-        UnityEngine.Debug.Log("Swing");
+        anim.SetTrigger("Swing_Sword");
     }
 }

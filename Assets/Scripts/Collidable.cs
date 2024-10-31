@@ -22,7 +22,9 @@ public class Collidable : MonoBehaviour
         for (int i = 0; i < hits.Length; i++)
         {
             if (hits[i] == null)
+            {
                 continue;
+            }
             OnCollide(hits[i]);
 
             //clean array

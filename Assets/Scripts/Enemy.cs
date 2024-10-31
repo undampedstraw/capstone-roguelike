@@ -28,6 +28,9 @@ public class Enemy : Mover
 
     private void FixedUpdate()
     {
+        //remember to readd basic sprite flipping here
+
+
         //check if player is within chase length
         if(Vector3.Distance(playerTransform.position, startingPosition) < chaseLength)
         {
