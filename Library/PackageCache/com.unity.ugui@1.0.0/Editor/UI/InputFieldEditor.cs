@@ -83,7 +83,7 @@ namespace UnityEditor.UI
 
             if (m_TextComponent != null && m_TextComponent.objectReferenceValue != null)
             {
-                Text text = m_TextComponent.objectReferenceValue as Text;
+                TextMeshProUGUI text = m_TextComponent.objectReferenceValue as TextMeshProUGUI;
                 if (text.supportRichText)
                 {
                     EditorGUILayout.HelpBox("Using Rich Text with input is unsupported.", MessageType.Warning);

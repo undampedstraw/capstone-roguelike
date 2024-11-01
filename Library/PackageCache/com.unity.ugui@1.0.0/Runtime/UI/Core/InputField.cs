@@ -212,7 +212,7 @@ namespace UnityEngine.UI
 
         [SerializeField]
         [FormerlySerializedAs("text")]
-        protected Text m_TextComponent;
+        protected TextMeshProUGUI m_TextComponent;
 
         [SerializeField]
         protected Graphic m_Placeholder;
@@ -580,7 +580,7 @@ namespace UnityEngine.UI
         /// <summary>
         /// The Text component that is going to be used to render the text to screen.
         /// </summary>
-        public Text textComponent
+        public TextMeshProUGUI textComponent
         {
             get { return m_TextComponent; }
             set

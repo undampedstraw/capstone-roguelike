@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 namespace UnityEditor.UI
 {
-    [CustomEditor(typeof(Text), true)]
+    [CustomEditor(typeof(TextMeshProUGUI), true)]
     [CanEditMultipleObjects]
     /// <summary>
     /// Custom Editor for the Text Component.

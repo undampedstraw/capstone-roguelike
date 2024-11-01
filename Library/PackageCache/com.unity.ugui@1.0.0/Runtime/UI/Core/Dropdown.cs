@@ -23,7 +23,7 @@ namespace UnityEngine.UI
         protected internal class DropdownItem : MonoBehaviour, IPointerEnterHandler, ICancelHandler
         {
             [SerializeField]
-            private Text m_Text;
+            private TextMeshProUGUI m_Text;
             [SerializeField]
             private Image m_Image;
             [SerializeField]
@@ -31,7 +31,7 @@ namespace UnityEngine.UI
             [SerializeField]
             private Toggle m_Toggle;
 
-            public Text          text          { get { return m_Text;          } set { m_Text = value;           } }
+            public TextMeshProUGUI          text          { get { return m_Text;          } set { m_Text = value;           } }
             public Image         image         { get { return m_Image;         } set { m_Image = value;          } }
             public RectTransform rectTransform { get { return m_RectTransform; } set { m_RectTransform = value;  } }
             public Toggle        toggle        { get { return m_Toggle;        } set { m_Toggle = value;         } }
@@ -137,12 +137,12 @@ namespace UnityEngine.UI
 
         // Text to be used as a caption for the current value. It's not required, but it's kept here for convenience.
         [SerializeField]
-        private Text m_CaptionText;
+        private TextMeshProUGUI m_CaptionText;
 
         /// <summary>
         /// The Text component to hold the text of the currently selected option.
         /// </summary>
-        public Text captionText { get { return m_CaptionText; } set { m_CaptionText = value; RefreshShownValue(); } }
+        public TextMeshProUGUI captionText { get { return m_CaptionText; } set { m_CaptionText = value; RefreshShownValue(); } }
 
         [SerializeField]
         private Image m_CaptionImage;
@@ -155,12 +155,12 @@ namespace UnityEngine.UI
         [Space]
 
         [SerializeField]
-        private Text m_ItemText;
+        private TextMeshProUGUI m_ItemText;
 
         /// <summary>
         /// The Text component to hold the text of the item.
         /// </summary>
-        public Text itemText { get { return m_ItemText; } set { m_ItemText = value; RefreshShownValue(); } }
+        public TextMeshProUGUI itemText { get { return m_ItemText; } set { m_ItemText = value; RefreshShownValue(); } }
 
         [SerializeField]
         private Image m_ItemImage;

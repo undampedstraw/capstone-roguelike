@@ -12,18 +12,18 @@ namespace UnityEngine.UI
     /// </remarks>
     public static class FontUpdateTracker
     {
-        static Dictionary<Font, HashSet<Text>> m_Tracked = new Dictionary<Font, HashSet<Text>>();
+        static Dictionary<Font, HashSet<TextMeshProUGUI>> m_Tracked = new Dictionary<Font, HashSet<TextMeshProUGUI>>();
 
         /// <summary>
         /// Register a Text element for receiving texture atlas rebuild calls.
         /// </summary>
         /// <param name="t">The Text object to track</param>
-        public static void TrackText(Text t)
+        public static void TrackText(TextMeshProUGUI t)
         {
             if (t.font == null)
                 return;
 
-            HashSet<Text> exists;
+            HashSet<TextMeshProUGUI> exists;
             m_Tracked.TryGetValue(t.font, out exists);
             if (exists == null)
             {
@@ -31,7 +31,7 @@ namespace UnityEngine.UI
                 if (m_Tracked.Count == 0)
                     Font.textureRebuilt += RebuildForFont;
 
-                exists = new HashSet<Text>();
+                exists = new HashSet<TextMeshProUGUI>();
                 m_Tracked.Add(t.font, exists);
             }
             exists.Add(t);
@@ -39,7 +39,7 @@ namespace UnityEngine.UI
 
         private static void RebuildForFont(Font f)
         {
-            HashSet<Text> texts;
+            HashSet<TextMeshProUGUI> texts;
             m_Tracked.TryGetValue(f, out texts);
 
             if (texts == null)
@@ -53,12 +53,12 @@ namespace UnityEngine.UI
         /// Deregister a Text element from receiving texture atlas rebuild calls.
         /// </summary>
         /// <param name="t">The Text object to no longer track</param>
-        public static void UntrackText(Text t)
+        public static void UntrackText(TextMeshProUGUI t)
         {
             if (t.font == null)
                 return;
 
-            HashSet<Text> texts;
+            HashSet<TextMeshProUGUI> texts;
             m_Tracked.TryGetValue(t.font, out texts);
 
             if (texts == null)

@@ -124,7 +124,7 @@ namespace UnityEngine.UI
             return go;
         }
 
-        private static void SetDefaultTextValues(Text lbl)
+        private static void SetDefaultTextValues(TextMeshProUGUI lbl)
         {
             // Set text values we want across UI elements in default controls.
             // Don't set values which are the same as the default values for the Text component,
@@ -210,7 +210,7 @@ namespace UnityEngine.UI
         {
             GameObject buttonRoot = CreateUIElementRoot("Button (Legacy)", s_ThickElementSize, typeof(Image), typeof(Button));
 
-            GameObject childText = CreateUIObject("Text (Legacy)", buttonRoot, typeof(Text));
+            GameObject childText = CreateUIObject("Text (Legacy)", buttonRoot, typeof(TextMeshProUGUI));
 
             Image image = buttonRoot.GetComponent<Image>();
             image.sprite = resources.standard;
@@ -220,7 +220,7 @@ namespace UnityEngine.UI
             Button bt = buttonRoot.GetComponent<Button>();
             SetDefaultColorTransitionValues(bt);
 
-            Text text = childText.GetComponent<Text>();
+            TextMeshProUGUI text = childText.GetComponent<TextMeshProUGUI>();
             text.text = "Button";
             text.alignment = TextAnchor.MiddleCenter;
             SetDefaultTextValues(text);
@@ -245,9 +245,9 @@ namespace UnityEngine.UI
         /// <returns>The root GameObject of the created element.</returns>
         public static GameObject CreateText(Resources resources)
         {
-            GameObject go = CreateUIElementRoot("Text (Legacy)", s_ThickElementSize, typeof(Text));
+            GameObject go = CreateUIElementRoot("Text (Legacy)", s_ThickElementSize, typeof(TextMeshProUGUI));
 
-            Text lbl = go.GetComponent<Text>();
+            TextMeshProUGUI lbl = go.GetComponent<TextMeshProUGUI>();
             lbl.text = "New Text";
             SetDefaultTextValues(lbl);
 
@@ -429,7 +429,7 @@ namespace UnityEngine.UI
 
             GameObject background = CreateUIObject("Background", toggleRoot, typeof(Image));
             GameObject checkmark = CreateUIObject("Checkmark", background, typeof(Image));
-            GameObject childLabel = CreateUIObject("Label", toggleRoot, typeof(Text));
+            GameObject childLabel = CreateUIObject("Label", toggleRoot, typeof(TextMeshProUGUI));
 
             // Set up components
             Toggle toggle = toggleRoot.GetComponent<Toggle>();
@@ -443,7 +443,7 @@ namespace UnityEngine.UI
             Image checkmarkImage = checkmark.GetComponent<Image>();
             checkmarkImage.sprite = resources.checkmark;
 
-            Text label = childLabel.GetComponent<Text>();
+            TextMeshProUGUI label = childLabel.GetComponent<TextMeshProUGUI>();
             label.text = "Toggle";
             SetDefaultTextValues(label);
 
@@ -488,8 +488,8 @@ namespace UnityEngine.UI
         {
             GameObject root = CreateUIElementRoot("InputField (Legacy)", s_ThickElementSize, typeof(Image), typeof(InputField));
 
-            GameObject childPlaceholder = CreateUIObject("Placeholder", root, typeof(Text));
-            GameObject childText = CreateUIObject("Text (Legacy)", root, typeof(Text));
+            GameObject childPlaceholder = CreateUIObject("Placeholder", root, typeof(TextMeshProUGUI));
+            GameObject childText = CreateUIObject("Text (Legacy)", root, typeof(TextMeshProUGUI));
 
             Image image = root.GetComponent<Image>();
             image.sprite = resources.inputField;
@@ -499,12 +499,12 @@ namespace UnityEngine.UI
             InputField inputField = root.GetComponent<InputField>();
             SetDefaultColorTransitionValues(inputField);
 
-            Text text = childText.GetComponent<Text>();
+            TextMeshProUGUI text = childText.GetComponent<TextMeshProUGUI>();
             text.text = "";
             text.supportRichText = false;
             SetDefaultTextValues(text);
 
-            Text placeholder = childPlaceholder.GetComponent<Text>();
+            TextMeshProUGUI placeholder = childPlaceholder.GetComponent<TextMeshProUGUI>();
             placeholder.text = "Enter text...";
             placeholder.fontStyle = FontStyle.Italic;
             // Make placeholder color half as opaque as normal text color.
@@ -558,7 +558,7 @@ namespace UnityEngine.UI
         {
             GameObject root = CreateUIElementRoot("Dropdown (Legacy)", s_ThickElementSize, typeof(Image), typeof(Dropdown));
 
-            GameObject label = CreateUIObject("Label", root, typeof(Text));
+            GameObject label = CreateUIObject("Label", root, typeof(TextMeshProUGUI));
             GameObject arrow = CreateUIObject("Arrow", root, typeof(Image));
             GameObject template = CreateUIObject("Template", root, typeof(Image), typeof(ScrollRect));
             GameObject viewport = CreateUIObject("Viewport", template, typeof(Image), typeof(Mask));
@@ -566,7 +566,7 @@ namespace UnityEngine.UI
             GameObject item = CreateUIObject("Item", content, typeof(Toggle));
             GameObject itemBackground = CreateUIObject("Item Background", item, typeof(Image));
             GameObject itemCheckmark = CreateUIObject("Item Checkmark", item, typeof(Image));
-            GameObject itemLabel = CreateUIObject("Item Label", item, typeof(Text));
+            GameObject itemLabel = CreateUIObject("Item Label", item, typeof(TextMeshProUGUI));
 
             // Sub controls.
 
@@ -585,7 +585,7 @@ namespace UnityEngine.UI
 
             // Setup item UI components.
 
-            Text itemLabelText = itemLabel.GetComponent<Text>();
+            TextMeshProUGUI itemLabelText = itemLabel.GetComponent<TextMeshProUGUI>();
             SetDefaultTextValues(itemLabelText);
             itemLabelText.alignment = TextAnchor.MiddleLeft;
 
@@ -624,7 +624,7 @@ namespace UnityEngine.UI
 
             // Setup dropdown UI components.
 
-            Text labelText = label.GetComponent<Text>();
+            TextMeshProUGUI labelText = label.GetComponent<TextMeshProUGUI>();
             SetDefaultTextValues(labelText);
             labelText.alignment = TextAnchor.MiddleLeft;
 
