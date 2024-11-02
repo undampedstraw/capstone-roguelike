@@ -4,9 +4,26 @@ using UnityEngine;
 
 public class CameraMotor : MonoBehaviour
 {
-    public Transform lookAt;
+    private Transform lookAt;
     public float boundX = 0.15f;
     public float boundY = 0.05f;
+
+    private static CameraMotor instance;
+    public static CameraMotor Instance {  get { return instance; } }
+
+    private void Awake()
+    {
+        if (instance != null && instance != this)
+            Destroy(this.gameObject);
+        else
+            instance = this;
+    }
+
+    private void Start()
+    {
+        DontDestroyOnLoad(gameObject);
+        lookAt = GameObject.Find("Player").transform;
+    }
 
     private void LateUpdate()
     {

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -11,6 +12,8 @@ public class GameManager : MonoBehaviour
         if(GameManager.instance != null)
         {
             Destroy(GameManager.instance);
+            Destroy(player.gameObject);
+            Destroy(floatingTextManager.gameObject);
             return;
         }
 
@@ -31,6 +34,7 @@ public class GameManager : MonoBehaviour
     public player player;
     public MeleeWeapon weapon;
     public FloatingTextManager floatingTextManager;
+    public Camera mainCamera;
 
     //logic
     public int pesos;
@@ -124,5 +128,8 @@ public class GameManager : MonoBehaviour
         if(GetCurrentLevel() != 1)
             player.SetLevel(GetCurrentLevel());
         weapon.SetWeaponLevel(int.Parse(data[3]));
+
+        //chooses where player spawns based on game object in scene
+        player.transform.position = GameObject.Find("SpawnPoint").transform.position;
     }
 }

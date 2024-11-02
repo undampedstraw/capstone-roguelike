@@ -13,6 +13,8 @@ public class player : Mover
     protected override void Start()
     {
         base.Start();
+
+        DontDestroyOnLoad(gameObject);
     }
     private void FixedUpdate()
     {
@@ -40,5 +42,16 @@ public class player : Mover
         {
             OnLevelUp();
         }
+    }
+
+    public void Heal(int healingAmount)
+    {
+        if (hitpoint == maxHitPoint)
+            return;
+
+        hitpoint += healingAmount;
+        if (hitpoint > maxHitPoint)
+            hitpoint = maxHitPoint;
+        GameManager.instance.ShowText("+" + healingAmount.ToString() + "hp", 25, Color.green, transform.position, Vector3.up * 30, 1.0f);
     }
 }
