@@ -9,19 +9,37 @@ using UnityEngine;
 //[RequireComponent(typeof(BoxCollider2D))]
 public class player : Mover
 {
+    public static player instance;
+    private bool isAlive = true;
+
+    private void Awake()
+    {
+        if (instance != null)
+        {
+
+            Destroy(gameObject);
+            instance = this;
+            //DontDestroyOnLoad(gameObject);
+            //instance = this;????????
+        }
+        else
+        {
+            instance = this;
+            //DontDestroyOnLoad(gameObject);
+        }
+    }
 
     protected override void Start()
     {
         base.Start();
-
-        DontDestroyOnLoad(gameObject);
     }
     private void FixedUpdate()
     {
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
 
-        UpdateMotor(new Vector3 (x, y, 0));
+        if(isAlive)
+            UpdateMotor(new Vector3 (x, y, 0));
 
     }
 
@@ -53,5 +71,28 @@ public class player : Mover
         if (hitpoint > maxHitPoint)
             hitpoint = maxHitPoint;
         GameManager.instance.ShowText("+" + healingAmount.ToString() + "hp", 25, Color.green, transform.position, Vector3.up * 30, 1.0f);
+        GameManager.instance.OnHitpointChange();
+    }
+
+    protected override void ReceiveDamage(Damage dmg)
+    {
+        if (!isAlive)
+            return;
+        base.ReceiveDamage(dmg);
+        GameManager.instance.OnHitpointChange();
+    }
+
+    protected override void Death()
+    {
+        isAlive = false;
+        GameManager.instance.deathMenuAnimator.SetTrigger("Show");
+    }
+
+    public void Respawn()
+    {
+        Heal(maxHitPoint);
+        isAlive = true;
+        lastImmune = Time.time;
+        pushDirection = Vector3.zero;
     }
 }

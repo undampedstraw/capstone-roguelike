@@ -21,7 +21,7 @@ public class CameraMotor : MonoBehaviour
 
     private void Start()
     {
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
         lookAt = GameObject.Find("Player").transform;
     }
 

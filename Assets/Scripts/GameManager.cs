@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
             Destroy(GameManager.instance);
             Destroy(player.gameObject);
             Destroy(floatingTextManager.gameObject);
+            Destroy(hud);
+            Destroy(menu);
             return;
         }
 
@@ -21,7 +23,8 @@ public class GameManager : MonoBehaviour
 
         instance = this;
         SceneManager.sceneLoaded += LoadState;
-        DontDestroyOnLoad(gameObject);
+        SceneManager.sceneLoaded += OnSceneLoaded;
+        //DontDestroyOnLoad(gameObject);
     }
 
     //resources
@@ -35,6 +38,10 @@ public class GameManager : MonoBehaviour
     public MeleeWeapon weapon;
     public FloatingTextManager floatingTextManager;
     public Camera mainCamera;
+    public RectTransform hitpointBar;
+    public GameObject hud;
+    public GameObject menu;
+    public Animator deathMenuAnimator;
 
     //logic
     public int pesos;
@@ -57,6 +64,12 @@ public class GameManager : MonoBehaviour
             return true;
         }
         return false;
+    }
+
+    public void OnHitpointChange()
+    {
+        float ratio = (float)player.hitpoint / (float)player.maxHitPoint;
+        hitpointBar.localScale = new Vector3(1, ratio, 1);
     }
 
     public int GetCurrentLevel()
@@ -99,12 +112,11 @@ public class GameManager : MonoBehaviour
 
     public void OnLevelUp()
     {
-        UnityEngine.Debug.Log("leveled up");
         player.OnLevelUp();
+        OnHitpointChange();
     }
     public void SaveState()
     {
-        UnityEngine.Debug.Log("SaveState");
         
         string s = "";
         s += "0" + "|";
@@ -114,8 +126,17 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetString("SaveState", s);
     }
 
+    public void OnSceneLoaded(Scene s, LoadSceneMode mode)
+    {
+        player.transform.position = GameObject.Find("SpawnPoint").transform.position;
+    }
+
     public void LoadState(Scene sc, LoadSceneMode mode)
     {
+        SceneManager.sceneLoaded -= LoadState;
+        //known issue: weird duplicate character issue when reentering a scene for the 2nd time. This is likely due to
+        //something with singletons or instances of the player.
+
         if (!PlayerPrefs.HasKey("SaveState"))
             return;
 
@@ -129,7 +150,18 @@ public class GameManager : MonoBehaviour
             player.SetLevel(GetCurrentLevel());
         weapon.SetWeaponLevel(int.Parse(data[3]));
 
-        //chooses where player spawns based on game object in scene
-        player.transform.position = GameObject.Find("SpawnPoint").transform.position;
+        ////chooses where player spawns based on game object in scene
+        //player.transform.position = GameObject.Find("SpawnPoint").transform.position;
+    }
+
+    //death menu respawn
+    public void Respawn()
+    {
+        //KNOWN ISSUE: OnClick() for respawn button doesn't connect to gamemanager after first respawn
+        //since gamemanager instance changes. need to find a fix
+        UnityEngine.Debug.Log("RESPAWN PLAYER!");
+        deathMenuAnimator.SetTrigger("Hide");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Main");
+        player.Respawn();
     }
 }

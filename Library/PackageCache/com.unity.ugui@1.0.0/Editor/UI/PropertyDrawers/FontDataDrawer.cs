@@ -278,7 +278,7 @@ namespace UnityEditor.UI
             {
                 foreach (var obj in alignment.serializedObject.targetObjects)
                 {
-                    TextMeshProUGUI text = obj as TextMeshProUGUI;
+                    Text text = obj as Text;
                     horizontalAlignment = GetHorizontalAlignment(text.alignment);
                     leftAlign = leftAlign || (horizontalAlignment == HorizontalTextAligment.Left);
                     centerAlign = centerAlign || (horizontalAlignment == HorizontalTextAligment.Center);
@@ -325,7 +325,7 @@ namespace UnityEditor.UI
             {
                 foreach (var obj in alignment.serializedObject.targetObjects)
                 {
-                    TextMeshProUGUI text = obj as TextMeshProUGUI;
+                    Text text = obj as Text;
                     TextAnchor textAlignment = text.alignment;
                     verticalTextAligment = GetVerticalAlignment(textAlignment);
                     topAlign = topAlign || (verticalTextAligment == VerticalTextAligment.Top);
@@ -439,7 +439,7 @@ namespace UnityEditor.UI
         {
             foreach (var obj in alignment.serializedObject.targetObjects)
             {
-                TextMeshProUGUI text = obj as TextMeshProUGUI;
+                Text text = obj as Text;
                 VerticalTextAligment currentVerticalAligment = GetVerticalAlignment(text.alignment);
                 Undo.RecordObject(text, "Horizontal Alignment");
                 text.alignment = GetAnchor(currentVerticalAligment, horizontalAlignment);
@@ -451,7 +451,7 @@ namespace UnityEditor.UI
         {
             foreach (var obj in alignment.serializedObject.targetObjects)
             {
-                TextMeshProUGUI text = obj as TextMeshProUGUI;
+                Text text = obj as Text;
                 HorizontalTextAligment currentHorizontalAligment = GetHorizontalAlignment(text.alignment);
                 Undo.RecordObject(text, "Vertical Alignment");
                 text.alignment = GetAnchor(verticalAlignment, currentHorizontalAligment);

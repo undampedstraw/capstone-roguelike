@@ -17,11 +17,15 @@ public class MeleeWeapon : Collidable
     private float lastSwing;
     private Animator anim;
 
+    private player player;
+    public Transform weaponFlip;
+
 
     protected override void Start()
     {
         base.Start();
         anim = GetComponent<Animator>();
+        player = GameObject.Find("Player").GetComponent<player>();
     }
 
     protected override void Update()
@@ -36,6 +40,8 @@ public class MeleeWeapon : Collidable
                 Swing();
             }
         }
+
+        FlipSprite();
     }
 
     protected override void OnCollide(Collider2D coll)
@@ -73,5 +79,19 @@ public class MeleeWeapon : Collidable
     {
         weaponLevel = level;
         spriteRenderer.sprite = GameManager.instance.weaponSprites[weaponLevel];
+    }
+
+    public void FlipSprite()
+    {
+        if (player.spriteRenderer.flipX == true)
+        {
+            spriteRenderer.flipX = true;
+            //weaponFlip.
+        }
+        else
+        {
+            spriteRenderer.flipX = false;
+            transform.position += new Vector3(0.16f, 0, 0);
+        }
     }
 }

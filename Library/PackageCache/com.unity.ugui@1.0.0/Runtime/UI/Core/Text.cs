@@ -8,7 +8,7 @@ namespace UnityEngine.UI
     /// <summary>
     /// The default Graphic to draw font data to screen.
     /// </summary>
-    public class TextMeshProUGUI : MaskableGraphic, ILayoutElement
+    public class Text : MaskableGraphic, ILayoutElement
     {
         [SerializeField] private FontData m_FontData = FontData.defaultFontData;
 
@@ -27,7 +27,7 @@ namespace UnityEngine.UI
         // We use this flag instead of Unregistering/Registering the callback to avoid allocation.
         [NonSerialized] protected bool m_DisableFontTextureRebuiltCallback = false;
 
-        protected TextMeshProUGUI()
+        protected Text()
         {
             useLegacyMeshGeneration = false;
         }

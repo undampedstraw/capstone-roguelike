@@ -169,6 +169,7 @@ MonoBehaviour:
   - 4
   weaponLevel: 0
   spriteRenderer: {fileID: 8727367307751997422}
+  weaponFlip: {fileID: 3538376645872441684}
 --- !u!95 &698549185753675964
 Animator:
   serializedVersion: 5
@@ -336,6 +337,7 @@ GameObject:
   - component: {fileID: 6190485214669066760}
   - component: {fileID: 4952846871349170128}
   - component: {fileID: 7274677244289744621}
+  - component: {fileID: 4719856834513249246}
   m_Layer: 9
   m_Name: Player
   m_TagString: Fighter
@@ -427,6 +429,8 @@ MonoBehaviour:
   hitpoint: 10
   maxHitPoint: 10
   pushRecoverySpeed: 0.2
+  ySpeed: 0.75
+  xSpeed: 1
   spriteRenderer: {fileID: 6190485214669066760}
 --- !u!61 &7274677244289744621
 BoxCollider2D:
@@ -473,3 +477,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.101473495, y: 0.11044128}
   m_EdgeRadius: 0
+--- !u!114 &4719856834513249246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5855341106919425762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d090e88e2930e443a16f8b8a607e5d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -34,6 +34,6 @@ public class Collidable : MonoBehaviour
 
     protected virtual void OnCollide(Collider2D coll)
     {
-        UnityEngine.Debug.Log("OnCollide was not implemented in " + this.name);
+        //UnityEngine.Debug.Log("OnCollide was not implemented in " + this.name);
     }
 }
