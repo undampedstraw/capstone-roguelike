@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Yannis Fu\\Documents\\GitHub\\capstone-roguelike\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Yannis Fu\\Documents\\GitHub\\capstone-roguelike\\Assets\\Scripts\\GameManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\GameManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Yannis Fu\\Documents\\GitHub\\capstone-roguelike\\Assets\\Scripts\\FloatingTextManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\FloatingTextManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,10 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Yannis Fu\\Documents\\GitHub\\capstone-roguelike\\Assets\\Scripts\\Collidable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Collidable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Yannis Fu\\Documents\\GitHub\\capstone-roguelike\\Assets\\Scripts\\GameManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\GameManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Yannis Fu\\Documents\\GitHub\\capstone-roguelike\\Assets\\Scripts\\Shooting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -62,11 +62,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "FloatingTextManager.cs",
               "DocumentMoniker": "C:\\Users\\Yannis Fu\\Documents\\GitHub\\capstone-roguelike\\Assets\\Scripts\\FloatingTextManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\FloatingTextManager.cs",
@@ -79,7 +79,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Collidable.cs",
               "DocumentMoniker": "C:\\Users\\Yannis Fu\\Documents\\GitHub\\capstone-roguelike\\Assets\\Scripts\\Collidable.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Collidable.cs",
@@ -91,7 +91,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "CameraMotor.cs",
               "DocumentMoniker": "C:\\Users\\Yannis Fu\\Documents\\GitHub\\capstone-roguelike\\Assets\\Scripts\\CameraMotor.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\CameraMotor.cs",
@@ -99,20 +99,20 @@
               "RelativeToolTip": "Assets\\Scripts\\CameraMotor.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T00:03:20.833Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-02T00:03:20.833Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "GameManager.cs",
               "DocumentMoniker": "C:\\Users\\Yannis Fu\\Documents\\GitHub\\capstone-roguelike\\Assets\\Scripts\\GameManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GameManager.cs",
               "ToolTip": "C:\\Users\\Yannis Fu\\Documents\\GitHub\\capstone-roguelike\\Assets\\Scripts\\GameManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\GameManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T23:03:26.514Z"
+              "WhenOpened": "2024-10-31T23:03:26.514Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
