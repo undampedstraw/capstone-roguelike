@@ -122,6 +122,24 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &24186157 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8536300729415016194, guid: 7ceb92d5fb4cbe7448dbdd09c4239b2b, type: 3}
+  m_PrefabInstance: {fileID: 479561815191605220}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &24186159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 24186157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c97073b3b9bb30b4abca3eb0174f08d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isAttacking: 0
 --- !u!1 &108920565
 GameObject:
   m_ObjectHideFlags: 0
@@ -4657,8 +4675,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6bc8b7a857c77c4b9d1924100fe19e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  spriteRenderer: {fileID: 0}
 --- !u!1 &777234557
 GameObject:
   m_ObjectHideFlags: 0
@@ -8775,16 +8791,6 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: -3, y: -2, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 1
-      m_TileSpriteIndex: 1
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   - first: {x: -2, y: -2, z: 0}
     second:
       serializedVersion: 2
@@ -9106,16 +9112,6 @@ Tilemap:
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
   - first: {x: -5, y: -1, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 1
-      m_TileSpriteIndex: 1
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: -4, y: -1, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 1
@@ -14949,19 +14945,19 @@ Tilemap:
   m_TileAssetArray:
   - m_RefCount: 814
     m_Data: {fileID: 11400000, guid: 0ec2db6040407bd4d84d3476c353d89c, type: 2}
-  - m_RefCount: 165
+  - m_RefCount: 163
     m_Data: {fileID: 11400000, guid: 0567bd63a47ee574a95551dce6f2e3fb, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: f1b662c3089a6ae4f9dce483b7b52975, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 814
     m_Data: {fileID: 1160920067, guid: 4f3cc40c161fe7f439098b53c75f86f0, type: 3}
-  - m_RefCount: 165
+  - m_RefCount: 163
     m_Data: {fileID: -1288513102, guid: 4f3cc40c161fe7f439098b53c75f86f0, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 1129421412, guid: 4f3cc40c161fe7f439098b53c75f86f0, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 980
+  - m_RefCount: 978
     m_Data:
       e00: 1
       e01: 0
@@ -14980,7 +14976,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 980
+  - m_RefCount: 978
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -19279,6 +19275,34 @@ PrefabInstance:
       propertyPath: weaponFlip
       value: 
       objectReference: {fileID: 752603139}
+    - target: {fileID: 3962222634545113088, guid: 7ceb92d5fb4cbe7448dbdd09c4239b2b, type: 3}
+      propertyPath: OnAnimationEventTriggered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3962222634545113088, guid: 7ceb92d5fb4cbe7448dbdd09c4239b2b, type: 3}
+      propertyPath: OnAnimationEventTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3962222634545113088, guid: 7ceb92d5fb4cbe7448dbdd09c4239b2b, type: 3}
+      propertyPath: OnAnimationEventTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 24186159}
+    - target: {fileID: 3962222634545113088, guid: 7ceb92d5fb4cbe7448dbdd09c4239b2b, type: 3}
+      propertyPath: OnAnimationEventTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3962222634545113088, guid: 7ceb92d5fb4cbe7448dbdd09c4239b2b, type: 3}
+      propertyPath: OnAnimationEventTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: resetIsAttacking
+      objectReference: {fileID: 0}
+    - target: {fileID: 3962222634545113088, guid: 7ceb92d5fb4cbe7448dbdd09c4239b2b, type: 3}
+      propertyPath: OnAnimationEventTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MeleeAim, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3962222634545113088, guid: 7ceb92d5fb4cbe7448dbdd09c4239b2b, type: 3}
+      propertyPath: OnAnimationEventTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5593797097284718923, guid: 7ceb92d5fb4cbe7448dbdd09c4239b2b, type: 3}
       propertyPath: m_Size.x
       value: 0.13109624
@@ -19290,6 +19314,10 @@ PrefabInstance:
     - target: {fileID: 5593797097284718923, guid: 7ceb92d5fb4cbe7448dbdd09c4239b2b, type: 3}
       propertyPath: m_Offset.x
       value: -0.0016084164
+      objectReference: {fileID: 0}
+    - target: {fileID: 5593797097284718923, guid: 7ceb92d5fb4cbe7448dbdd09c4239b2b, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.12
       objectReference: {fileID: 0}
     - target: {fileID: 5855341106919425762, guid: 7ceb92d5fb4cbe7448dbdd09c4239b2b, type: 3}
       propertyPath: m_Name
@@ -19347,6 +19375,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8536300729415016194, guid: 7ceb92d5fb4cbe7448dbdd09c4239b2b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 24186159}
     - targetCorrespondingSourceObject: {fileID: 229996511276184268, guid: 7ceb92d5fb4cbe7448dbdd09c4239b2b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 752603140}
