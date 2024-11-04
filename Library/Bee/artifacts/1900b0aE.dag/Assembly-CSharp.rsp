@@ -389,6 +389,7 @@
 "Assets/Scripts/FloatingTextManager.cs"
 "Assets/Scripts/GameManager.cs"
 "Assets/Scripts/HealingFountain.cs"
+"Assets/Scripts/MeleeAim.cs"
 "Assets/Scripts/MeleeWeapon.cs"
 "Assets/Scripts/Mover.cs"
 "Assets/Scripts/NPCDialogue.cs"

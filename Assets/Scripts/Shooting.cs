@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Shooting : MonoBehaviour
 {
-    private Camera Camera; //maybe make a separate camera for this?
+    private Camera Camera;
     private Vector3 mousePosition;
     public GameObject bullet;
     public Transform bulletTransform;
