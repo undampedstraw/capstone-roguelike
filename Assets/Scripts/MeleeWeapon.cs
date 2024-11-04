@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class MeleeWeapon : Collidable
 {
@@ -16,9 +17,14 @@ public class MeleeWeapon : Collidable
     private float cooldown = 0.5f;
     private float lastSwing;
     private Animator anim;
+    public UnityEvent OnAnimationEventTriggered;
+    public bool isAttacking { get; set; }
 
     private player player;
-    public Transform weaponFlip;
+    public Transform weaponPos;
+
+    public MeleeAim parent;
+
 
 
     protected override void Start()
@@ -26,12 +32,12 @@ public class MeleeWeapon : Collidable
         base.Start();
         anim = GetComponent<Animator>();
         player = GameObject.Find("Player").GetComponent<player>();
+        parent = GameObject.Find("MeleeAim").GetComponent<MeleeAim>();
     }
 
     protected override void Update()
     {
         base.Update();
-
         if(Input.GetKeyDown(KeyCode.Space))
         {
             if(Time.time - lastSwing > cooldown)
@@ -40,8 +46,6 @@ public class MeleeWeapon : Collidable
                 Swing();
             }
         }
-
-        FlipSprite();
     }
 
     protected override void OnCollide(Collider2D coll)
@@ -66,7 +70,13 @@ public class MeleeWeapon : Collidable
 
     private void Swing()
     {
+        parent.isAttacking = true;
         anim.SetTrigger("Swing_Sword");
+    }
+
+    public void TriggerEvent()
+    {
+        OnAnimationEventTriggered?.Invoke();
     }
 
     public void UpgradeWeapon()
@@ -81,17 +91,4 @@ public class MeleeWeapon : Collidable
         spriteRenderer.sprite = GameManager.instance.weaponSprites[weaponLevel];
     }
 
-    public void FlipSprite()
-    {
-        if (player.spriteRenderer.flipX == true)
-        {
-            spriteRenderer.flipX = true;
-            //weaponFlip.
-        }
-        else
-        {
-            spriteRenderer.flipX = false;
-            transform.position += new Vector3(0.16f, 0, 0);
-        }
-    }
 }

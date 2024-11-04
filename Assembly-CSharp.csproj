@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\Mover.cs" />
     <Compile Include="Assets\Scripts\Damage.cs" />
+    <Compile Include="Assets\Scripts\MeleeAim.cs" />
     <Compile Include="Assets\Scripts\Portal.cs" />
     <Compile Include="Assets\Scripts\Crate.cs" />
     <Compile Include="Assets\Scripts\Boss.cs" />
