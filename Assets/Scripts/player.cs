@@ -4,6 +4,7 @@ using System.Collections.Specialized;
 using System.Diagnostics;
 using System.Security.Cryptography;
 using System.Threading;
+using Unity.VisualScripting;
 using UnityEngine;
 
 //[RequireComponent(typeof(BoxCollider2D))]
@@ -11,6 +12,13 @@ public class player : Mover
 {
     public static player instance;
     private bool isAlive = true;
+
+    public bool isRolling;
+    public float rollSpeed;
+    private float rollCooldown = 0.50f;
+    private float lastRoll;
+
+    private Animator animator;
 
     private void Awake()
     {
@@ -32,14 +40,27 @@ public class player : Mover
     protected override void Start()
     {
         base.Start();
+        animator = GetComponent<Animator>();
     }
-    private void FixedUpdate()
+    private void Update()
     {
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
 
         if(isAlive)
-            UpdateMotor(new Vector3 (x, y, 0));
+            UpdateMotor(new Vector3 (x, y, 0).normalized);
+
+        //implement roll input here
+        if(Input.GetKeyDown(KeyCode.Space) && (x != 0 || y!= 0)) //only when player is moving can they roll
+                                                                 //add later " && isRolling == false"
+        {
+            UnityEngine.Debug.Log("player should dodge roll here");
+            if (Time.time - lastRoll > rollCooldown)
+            {
+                lastRoll = Time.time;
+                Roll();
+            }
+        }
 
     }
 
@@ -60,6 +81,13 @@ public class player : Mover
         {
             OnLevelUp();
         }
+    }
+
+    public void Roll()
+    {
+        //isRolling = true;
+        UnityEngine.Debug.Log("Rolling....");
+        animator.SetTrigger("Roll");
     }
 
     public void Heal(int healingAmount)
