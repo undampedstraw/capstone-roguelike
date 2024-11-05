@@ -14,10 +14,13 @@ public class Shooting : MonoBehaviour
 
     private player player;
 
+    //public SpriteRenderer spriteRenderer;
+
     void Start()
     {
         Camera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         player = GameObject.Find("Player").GetComponent<player>();
+        //spriteRenderer = GameObject.Find("PlayerSprite").GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -31,6 +34,8 @@ public class Shooting : MonoBehaviour
         transform.rotation = Quaternion.Euler(0, 0, rotationZ);
 
         player.spriteRenderer.flipX = rotationZ > 90 || rotationZ < -90;
+        player.childSprite.flipX = rotationZ > 90 || rotationZ < -90;
+        //spriteRenderer.flipX = rotationZ > 90 || rotationZ < -90;
 
         if (!canFire)
         {

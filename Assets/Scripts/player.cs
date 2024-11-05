@@ -20,6 +20,8 @@ public class player : Mover
 
     private Animator animator;
 
+    public SpriteRenderer childSprite;
+
     private void Awake()
     {
         if (instance != null)
@@ -41,6 +43,9 @@ public class player : Mover
     {
         base.Start();
         animator = GetComponent<Animator>();
+        //NOTE: Because of roll changes, the Mover parent sprite renderer goes unused in player
+        childSprite = GameObject.Find("PlayerSprite").GetComponent<SpriteRenderer>();
+
     }
     private void Update()
     {
@@ -67,6 +72,7 @@ public class player : Mover
     public void SwapSprite(int skinId)
     {
         spriteRenderer.sprite = GameManager.instance.playerSprites[skinId];
+        childSprite.sprite = spriteRenderer.sprite;
     }
 
     public void OnLevelUp()
