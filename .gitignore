@@ -84,3 +84,4 @@ Library/SourceAssetDB
 Library/Search/transactions.db
 Library/ArtifactDB
 /Library
+capstone-roguelike/Library/
