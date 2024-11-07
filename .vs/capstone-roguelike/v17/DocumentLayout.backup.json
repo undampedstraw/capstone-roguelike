@@ -1,46 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Yannis Fu\\Desktop\\unity garbage\\capstone-roguelike\\",
+  "WorkspaceRootPath": "C:\\Users\\Yannis Fu\\Documents\\GitHub\\capstone-roguelike\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3F4A6F62-637B-0731-DCD2-9FA660391AC2}|Assembly-CSharp.Player.csproj|C:\\Users\\Yannis Fu\\Desktop\\unity garbage\\capstone-roguelike\\assets\\scripts\\mover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F4A6F62-637B-0731-DCD2-9FA660391AC2}|Assembly-CSharp.Player.csproj|solutionrelative:assets\\scripts\\mover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F32D01E6-2759-1A4F-45C6-321502C44BE3}|Assembly-CSharp.csproj|c:\\users\\yannis fu\\documents\\github\\capstone-roguelike\\assets\\scripts\\weapon\\aimweaponevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F32D01E6-2759-1A4F-45C6-321502C44BE3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\weapon\\aimweaponevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3F4A6F62-637B-0731-DCD2-9FA660391AC2}|Assembly-CSharp.Player.csproj|C:\\Users\\Yannis Fu\\Desktop\\unity garbage\\capstone-roguelike\\assets\\scripts\\fighter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F4A6F62-637B-0731-DCD2-9FA660391AC2}|Assembly-CSharp.Player.csproj|solutionrelative:assets\\scripts\\fighter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F32D01E6-2759-1A4F-45C6-321502C44BE3}|Assembly-CSharp.csproj|C:\\Users\\Yannis Fu\\Documents\\GitHub\\capstone-roguelike\\assets\\scripts\\weapon\\weapondetailsso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F32D01E6-2759-1A4F-45C6-321502C44BE3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\weapon\\weapondetailsso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3F4A6F62-637B-0731-DCD2-9FA660391AC2}|Assembly-CSharp.Player.csproj|C:\\Users\\Yannis Fu\\Desktop\\unity garbage\\capstone-roguelike\\assets\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F4A6F62-637B-0731-DCD2-9FA660391AC2}|Assembly-CSharp.Player.csproj|solutionrelative:assets\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F32D01E6-2759-1A4F-45C6-321502C44BE3}|Assembly-CSharp.csproj|C:\\Users\\Yannis Fu\\Documents\\GitHub\\capstone-roguelike\\assets\\scripts\\weapon\\fireweapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F32D01E6-2759-1A4F-45C6-321502C44BE3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\weapon\\fireweapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3F4A6F62-637B-0731-DCD2-9FA660391AC2}|Assembly-CSharp.Player.csproj|C:\\Users\\Yannis Fu\\Desktop\\unity garbage\\capstone-roguelike\\assets\\scripts\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F4A6F62-637B-0731-DCD2-9FA660391AC2}|Assembly-CSharp.Player.csproj|solutionrelative:assets\\scripts\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F32D01E6-2759-1A4F-45C6-321502C44BE3}|Assembly-CSharp.csproj|C:\\Users\\Yannis Fu\\Documents\\GitHub\\capstone-roguelike\\assets\\scripts\\ammo\\ammo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F32D01E6-2759-1A4F-45C6-321502C44BE3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ammo\\ammo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3F4A6F62-637B-0731-DCD2-9FA660391AC2}|Assembly-CSharp.Player.csproj|c:\\users\\yannis fu\\desktop\\unity garbage\\capstone-roguelike\\assets\\scripts\\meleeweapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F4A6F62-637B-0731-DCD2-9FA660391AC2}|Assembly-CSharp.Player.csproj|solutionrelative:assets\\scripts\\meleeweapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|c:\\users\\yannis fu\\documents\\github\\capstone-roguelike\\assets\\scripts\\ammo\\ifireable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\scripts\\ammo\\ifireable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3F4A6F62-637B-0731-DCD2-9FA660391AC2}|Assembly-CSharp.Player.csproj|C:\\Users\\Yannis Fu\\Desktop\\unity garbage\\capstone-roguelike\\assets\\scripts\\cameramotor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F4A6F62-637B-0731-DCD2-9FA660391AC2}|Assembly-CSharp.Player.csproj|solutionrelative:assets\\scripts\\cameramotor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F4A6F62-637B-0731-DCD2-9FA660391AC2}|Assembly-CSharp.Player.csproj|C:\\Users\\Yannis Fu\\Desktop\\unity garbage\\capstone-roguelike\\assets\\scripts\\enemyhitbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F4A6F62-637B-0731-DCD2-9FA660391AC2}|Assembly-CSharp.Player.csproj|solutionrelative:assets\\scripts\\enemyhitbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F4A6F62-637B-0731-DCD2-9FA660391AC2}|Assembly-CSharp.Player.csproj|C:\\Users\\Yannis Fu\\Desktop\\unity garbage\\capstone-roguelike\\assets\\scripts\\collidable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F4A6F62-637B-0731-DCD2-9FA660391AC2}|Assembly-CSharp.Player.csproj|solutionrelative:assets\\scripts\\collidable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F4A6F62-637B-0731-DCD2-9FA660391AC2}|Assembly-CSharp.Player.csproj|C:\\Users\\Yannis Fu\\Desktop\\unity garbage\\capstone-roguelike\\assets\\scripts\\meleeaim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F4A6F62-637B-0731-DCD2-9FA660391AC2}|Assembly-CSharp.Player.csproj|solutionrelative:assets\\scripts\\meleeaim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F4A6F62-637B-0731-DCD2-9FA660391AC2}|Assembly-CSharp.Player.csproj|C:\\Users\\Yannis Fu\\Desktop\\unity garbage\\capstone-roguelike\\assets\\scripts\\shooting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F4A6F62-637B-0731-DCD2-9FA660391AC2}|Assembly-CSharp.Player.csproj|solutionrelative:assets\\scripts\\shooting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Yannis Fu\\Documents\\GitHub\\capstone-roguelike\\assets\\scripts\\ammo\\ammodetailsso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\scripts\\ammo\\ammodetailsso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,137 +34,80 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "MeleeAim.cs",
-              "DocumentMoniker": "C:\\Users\\Yannis Fu\\Desktop\\unity garbage\\capstone-roguelike\\Assets\\Scripts\\MeleeAim.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\MeleeAim.cs",
-              "ToolTip": "C:\\Users\\Yannis Fu\\Desktop\\unity garbage\\capstone-roguelike\\Assets\\Scripts\\MeleeAim.cs",
-              "RelativeToolTip": "Assets\\Scripts\\MeleeAim.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-03T22:48:49.908Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Collidable.cs",
-              "DocumentMoniker": "C:\\Users\\Yannis Fu\\Desktop\\unity garbage\\capstone-roguelike\\Assets\\Scripts\\Collidable.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Collidable.cs",
-              "ToolTip": "C:\\Users\\Yannis Fu\\Desktop\\unity garbage\\capstone-roguelike\\Assets\\Scripts\\Collidable.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Collidable.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T00:32:20.07Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Shooting.cs",
-              "DocumentMoniker": "C:\\Users\\Yannis Fu\\Desktop\\unity garbage\\capstone-roguelike\\Assets\\Scripts\\Shooting.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Shooting.cs",
-              "ToolTip": "C:\\Users\\Yannis Fu\\Desktop\\unity garbage\\capstone-roguelike\\Assets\\Scripts\\Shooting.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Shooting.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAQwCMAAABIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T00:03:07.869Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "player.cs",
-              "DocumentMoniker": "C:\\Users\\Yannis Fu\\Desktop\\unity garbage\\capstone-roguelike\\Assets\\Scripts\\player.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\player.cs",
-              "ToolTip": "C:\\Users\\Yannis Fu\\Desktop\\unity garbage\\capstone-roguelike\\Assets\\Scripts\\player.cs",
-              "RelativeToolTip": "Assets\\Scripts\\player.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAowHMAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-22T22:43:05.576Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Mover.cs",
-              "DocumentMoniker": "C:\\Users\\Yannis Fu\\Desktop\\unity garbage\\capstone-roguelike\\Assets\\Scripts\\Mover.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Mover.cs",
-              "ToolTip": "C:\\Users\\Yannis Fu\\Desktop\\unity garbage\\capstone-roguelike\\Assets\\Scripts\\Mover.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Mover.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAApAAAAAAAAAA==",
+              "Title": "AimWeaponEvent.cs",
+              "DocumentMoniker": "C:\\Users\\Yannis Fu\\Documents\\GitHub\\capstone-roguelike\\Assets\\Scripts\\Weapon\\AimWeaponEvent.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Weapon\\AimWeaponEvent.cs",
+              "ToolTip": "C:\\Users\\Yannis Fu\\Documents\\GitHub\\capstone-roguelike\\Assets\\Scripts\\Weapon\\AimWeaponEvent.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Weapon\\AimWeaponEvent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAACIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T03:17:37.745Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MeleeWeapon.cs",
-              "DocumentMoniker": "C:\\Users\\Yannis Fu\\Desktop\\unity garbage\\capstone-roguelike\\Assets\\Scripts\\MeleeWeapon.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\MeleeWeapon.cs",
-              "ToolTip": "C:\\Users\\Yannis Fu\\Desktop\\unity garbage\\capstone-roguelike\\Assets\\Scripts\\MeleeWeapon.cs",
-              "RelativeToolTip": "Assets\\Scripts\\MeleeWeapon.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAABGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T23:39:47.667Z",
+              "WhenOpened": "2024-11-07T20:49:44.071Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Fighter.cs",
-              "DocumentMoniker": "C:\\Users\\Yannis Fu\\Desktop\\unity garbage\\capstone-roguelike\\Assets\\Scripts\\Fighter.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Fighter.cs",
-              "ToolTip": "C:\\Users\\Yannis Fu\\Desktop\\unity garbage\\capstone-roguelike\\Assets\\Scripts\\Fighter.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Fighter.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAZAAAAAAAAAA==",
+              "Title": "WeaponDetailsSO.cs",
+              "DocumentMoniker": "C:\\Users\\Yannis Fu\\Documents\\GitHub\\capstone-roguelike\\Assets\\Scripts\\Weapon\\WeaponDetailsSO.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Weapon\\WeaponDetailsSO.cs",
+              "ToolTip": "C:\\Users\\Yannis Fu\\Documents\\GitHub\\capstone-roguelike\\Assets\\Scripts\\Weapon\\WeaponDetailsSO.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Weapon\\WeaponDetailsSO.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T21:32:17.411Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-07T20:47:45.822Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CameraMotor.cs",
-              "DocumentMoniker": "C:\\Users\\Yannis Fu\\Desktop\\unity garbage\\capstone-roguelike\\Assets\\Scripts\\CameraMotor.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\CameraMotor.cs",
-              "ToolTip": "C:\\Users\\Yannis Fu\\Desktop\\unity garbage\\capstone-roguelike\\Assets\\Scripts\\CameraMotor.cs",
-              "RelativeToolTip": "Assets\\Scripts\\CameraMotor.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAKAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "FireWeapon.cs",
+              "DocumentMoniker": "C:\\Users\\Yannis Fu\\Documents\\GitHub\\capstone-roguelike\\Assets\\Scripts\\Weapon\\FireWeapon.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Weapon\\FireWeapon.cs",
+              "ToolTip": "C:\\Users\\Yannis Fu\\Documents\\GitHub\\capstone-roguelike\\Assets\\Scripts\\Weapon\\FireWeapon.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Weapon\\FireWeapon.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwBwAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T00:03:20.833Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "EnemyHitbox.cs",
-              "DocumentMoniker": "C:\\Users\\Yannis Fu\\Desktop\\unity garbage\\capstone-roguelike\\Assets\\Scripts\\EnemyHitbox.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\EnemyHitbox.cs",
-              "ToolTip": "C:\\Users\\Yannis Fu\\Desktop\\unity garbage\\capstone-roguelike\\Assets\\Scripts\\EnemyHitbox.cs",
-              "RelativeToolTip": "Assets\\Scripts\\EnemyHitbox.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T22:05:05.394Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-07T20:46:26.998Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Enemy.cs",
-              "DocumentMoniker": "C:\\Users\\Yannis Fu\\Desktop\\unity garbage\\capstone-roguelike\\Assets\\Scripts\\Enemy.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy.cs",
-              "ToolTip": "C:\\Users\\Yannis Fu\\Desktop\\unity garbage\\capstone-roguelike\\Assets\\Scripts\\Enemy.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Enemy.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAA/AAAAAAAAAA==",
+              "Title": "Ammo.cs",
+              "DocumentMoniker": "C:\\Users\\Yannis Fu\\Documents\\GitHub\\capstone-roguelike\\Assets\\Scripts\\Ammo\\Ammo.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Ammo\\Ammo.cs",
+              "ToolTip": "C:\\Users\\Yannis Fu\\Documents\\GitHub\\capstone-roguelike\\Assets\\Scripts\\Ammo\\Ammo.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Ammo\\Ammo.cs",
+              "ViewState": "AgIAAMoAAAAAAAAAAIA7wNcAAADWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T02:57:56.142Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-07T20:42:00.803Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AmmoDetailsSO.cs",
+              "DocumentMoniker": "C:\\Users\\Yannis Fu\\Documents\\GitHub\\capstone-roguelike\\Assets\\Scripts\\Ammo\\AmmoDetailsSO.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Ammo\\AmmoDetailsSO.cs",
+              "ToolTip": "C:\\Users\\Yannis Fu\\Documents\\GitHub\\capstone-roguelike\\Assets\\Scripts\\Ammo\\AmmoDetailsSO.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Ammo\\AmmoDetailsSO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T20:41:10.748Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IFireable.cs",
+              "DocumentMoniker": "C:\\Users\\Yannis Fu\\Documents\\GitHub\\capstone-roguelike\\Assets\\Scripts\\Ammo\\IFireable.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Ammo\\IFireable.cs",
+              "ToolTip": "C:\\Users\\Yannis Fu\\Documents\\GitHub\\capstone-roguelike\\Assets\\Scripts\\Ammo\\IFireable.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Ammo\\IFireable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T20:40:43.95Z"
             }
           ]
         }
