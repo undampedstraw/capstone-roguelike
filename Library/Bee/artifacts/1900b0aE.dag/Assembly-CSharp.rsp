@@ -392,6 +392,7 @@
 "Assets/Scripts/MeleeAim.cs"
 "Assets/Scripts/MeleeWeapon.cs"
 "Assets/Scripts/Mover.cs"
+"Assets/Scripts/MoverPlayer.cs"
 "Assets/Scripts/NPCDialogue.cs"
 "Assets/Scripts/player.cs"
 "Assets/Scripts/Portal.cs"

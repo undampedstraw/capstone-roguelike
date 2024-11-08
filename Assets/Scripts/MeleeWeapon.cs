@@ -37,7 +37,7 @@ public class MeleeWeapon : Collidable
     protected override void Update()
     {
         base.Update();
-        if(Input.GetMouseButton(1))
+        if(Input.GetMouseButton(1) && player.getCanAttack())
         {
             if(Time.time - lastSwing > cooldown)
             {

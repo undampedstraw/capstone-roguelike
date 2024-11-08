@@ -15,8 +15,11 @@ public class player : MoverPlayer
 
     public bool isRolling;
     public float rollSpeed;
-    private float rollCooldown = 0.4f;
+    private float rollLength = 0.4f;
+    private float rollCooldown = 0.5f;
     private float lastRoll;
+
+    private bool canAttack = true; //cant attack during dash
 
     private Animator animator;
 
@@ -27,6 +30,9 @@ public class player : MoverPlayer
 
     private float currentMoveSpeed;
     private float lockX, lockY;
+
+    public bool getCanAttack(){ return canAttack; }
+
 
     private void Awake()
     {
@@ -57,11 +63,12 @@ public class player : MoverPlayer
     }
     private void Update()
     {
-        bool rollCooldownCalc = Time.time - lastRoll > rollCooldown;
-        if (rollCooldownCalc && isRolling == true)
+        bool rollLengthCalc = Time.time - lastRoll > rollLength;
+        if (rollLengthCalc && isRolling == true)
         {
             trailRenderer.emitting = false;
             isRolling = false;
+            canAttack = true;
             currentMoveSpeed = moveSpeed;
         }
 
@@ -83,18 +90,24 @@ public class player : MoverPlayer
             rigidbodyPlayer.velocity = move * currentMoveSpeed;
         }
 
-        
-        
+
+
 
         //implement roll input here
-        if(Input.GetKeyDown(KeyCode.Space) && (x != 0 || y!= 0)) //only when player is moving can they roll add later " && isRolling == false"
+        bool canRoll;
+        if (lastRoll == 0)
+            canRoll = true;
+        else
+            canRoll = Time.time - lastRoll > rollCooldown;
+        if(Input.GetKeyDown(KeyCode.Space) && (x != 0 || y!= 0) && canRoll) //only when player is moving can they roll add later " && isRolling == false"
         {
             rollDirection = new Vector3 (x, y, 0).normalized;
             lockX = x;
             lockY = y;
-            if (rollCooldownCalc)
+            if (rollLengthCalc)
             {
                 lastRoll = Time.time;
+                canAttack = false;
                 Roll(rollDirection);
             }
         }
