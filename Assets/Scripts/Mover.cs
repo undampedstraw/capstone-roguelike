@@ -12,6 +12,8 @@ public abstract class Mover : Fighter
 
     public SpriteRenderer spriteRenderer;
 
+    //public SpriteRenderer childSprite;
+
     protected virtual void Start()
     {
         boxCollider = GetComponent<BoxCollider2D>();

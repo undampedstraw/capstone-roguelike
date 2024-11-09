@@ -32,7 +32,6 @@ public class MeleeAim : MonoBehaviour
 
     public void resetIsAttacking()
     {
-        UnityEngine.Debug.Log("resetting isattacking");
         isAttacking = false;
     }
 }

@@ -21,7 +21,6 @@ public class MeleeWeapon : Collidable
     public bool isAttacking { get; set; }
 
     private player player;
-    public Transform weaponPos;
 
     public MeleeAim parent;
 
@@ -38,7 +37,7 @@ public class MeleeWeapon : Collidable
     protected override void Update()
     {
         base.Update();
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetMouseButton(1) && player.getCanAttack())
         {
             if(Time.time - lastSwing > cooldown)
             {
