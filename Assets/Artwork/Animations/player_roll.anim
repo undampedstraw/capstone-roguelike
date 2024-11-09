@@ -77,7 +77,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Enabled
-    path: PlayerHitbox
+    path: PlayerProjectileHitbox
     classID: 61
     script: {fileID: 0}
     flags: 0
@@ -99,7 +99,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 4163229279
+      path: 74485147
       attribute: 3305885265
       script: {fileID: 0}
       typeID: 61
@@ -254,7 +254,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Enabled
-    path: PlayerHitbox
+    path: PlayerProjectileHitbox
     classID: 61
     script: {fileID: 0}
     flags: 0

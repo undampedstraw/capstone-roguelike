@@ -16899,7 +16899,7 @@ GameObject:
   - component: {fileID: 1915907725}
   - component: {fileID: 1915907726}
   m_Layer: 9
-  m_Name: PlayerHitbox
+  m_Name: PlayerProjectileHitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
