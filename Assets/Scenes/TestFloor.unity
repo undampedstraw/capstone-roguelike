@@ -1923,7 +1923,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3860182365096448090, guid: 8247e5bf50d5d0c438f35c4f576d231c, type: 3}
       propertyPath: cursorThreshold
-      value: 5
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3860182365096448090, guid: 8247e5bf50d5d0c438f35c4f576d231c, type: 3}
+      propertyPath: ignoreCursorRadius
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 3969525657621495488, guid: 8247e5bf50d5d0c438f35c4f576d231c, type: 3}
       propertyPath: m_LocalPosition.x
