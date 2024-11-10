@@ -72,13 +72,14 @@ public class CameraMotor : MonoBehaviour
         Vector3 distanceFromPlayer = mousePos - lookAt.position;
 
         //not really working will fix later. unused for now
+        //maybe if in radius, move camera back to center the player?
         //if (distanceFromPlayer.x < ignoreCursorRadius && distanceFromPlayer.y < ignoreCursorRadius)
         //{
         //    UnityEngine.Debug.Log("ignore cursor!");
         //    return; 
         //}
 
-        Vector3 targetPos = (lookAt.position + mousePos) / 2.0f;
+        Vector3 targetPos = (lookAt.position + mousePos) / 3.0f;
 
         
 
