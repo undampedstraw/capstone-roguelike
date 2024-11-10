@@ -108,6 +108,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boundX: 0.3
   boundY: 0.15
+  cursorThreshold: 0.4
+  ignoreCursorRadius: 0.2
 --- !u!114 &4386151723044930477
 MonoBehaviour:
   m_ObjectHideFlags: 0
