@@ -83,4 +83,20 @@ public class ExMenu : MonoBehaviour
             xpText.text = currXpIntoLevel.ToString() + " / " + diff;
         }
     }
+
+    public void PauseGame()
+    {
+        if (Time.timeScale == 1)
+        {
+            WaitForPause();
+            Time.timeScale = 0;
+        }
+        else
+            Time.timeScale = 1;
+    }
+
+    IEnumerator WaitForPause()
+    {
+        yield return new WaitForSeconds(0.25f);
+    }
 }
