@@ -10,7 +10,7 @@ using UnityEngine;
 //[RequireComponent(typeof(BoxCollider2D))]
 public class player : MoverPlayer
 {
-    public static player instance;
+    public static player instance { get; private set; }
     private bool isAlive = true;
 
     public bool isRolling;
@@ -36,18 +36,16 @@ public class player : MoverPlayer
 
     private void Awake()
     {
-        if (instance != null)
+        if (instance != null && instance != this)
         {
 
             Destroy(gameObject);
-            instance = this;
             //DontDestroyOnLoad(gameObject);
             //instance = this;????????
         }
         else
         {
             instance = this;
-            //DontDestroyOnLoad(gameObject);
         }
     }
 

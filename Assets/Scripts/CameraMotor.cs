@@ -71,6 +71,8 @@ public class CameraMotor : MonoBehaviour
         Vector3 mousePos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
         Vector3 distanceFromPlayer = mousePos - lookAt.position;
 
+        Cursor.lockState = CursorLockMode.Confined;
+
         //not really working will fix later. unused for now
         //maybe if in radius, move camera back to center the player?
         //if (distanceFromPlayer.x < ignoreCursorRadius && distanceFromPlayer.y < ignoreCursorRadius)
