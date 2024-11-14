@@ -206,6 +206,83 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &1746270620579068464
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1911406072604902792}
+  - component: {fileID: 7791504380719734077}
+  m_Layer: 9
+  m_Name: PlayerProjectileHitBox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1911406072604902792
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1746270620579068464}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8279646941372313882}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &7791504380719734077
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1746270620579068464}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.002852857, y: -0.0031103939}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.09935093, y: 0.11961588}
+  m_EdgeRadius: 0
 --- !u!1 &3273861891154414608
 GameObject:
   m_ObjectHideFlags: 0
@@ -379,6 +456,7 @@ Transform:
   - {fileID: 4524381385743814997}
   - {fileID: 7603529400113576168}
   - {fileID: 509994013795830525}
+  - {fileID: 1911406072604902792}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6190485214669066760
@@ -422,7 +500,7 @@ SpriteRenderer:
   m_SortingLayerID: 159952209
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: -538044981, guid: 4f3cc40c161fe7f439098b53c75f86f0, type: 3}
+  m_Sprite: {fileID: -1529433024, guid: cf7b9e8e3688ea14c81ee3f194816b75, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -453,6 +531,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 6190485214669066760}
   isRolling: 0
   rollSpeed: 1.5
+  animator: {fileID: 0}
   childSprite: {fileID: 0}
   rollDirection: {x: 0, y: 0, z: 0}
 --- !u!61 &7274677244289744621
@@ -487,18 +566,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.009911738, y: -0.014867611}
+  m_Offset: {x: -0.00035974383, y: -0.00015237927}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.16161616, y: 0.16161616}
+    oldSize: {x: 0.15, y: 0.15}
     newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.101473495, y: 0.11044128}
+  m_Size: {x: 0.13400191, y: 0.15019816}
   m_EdgeRadius: 0
 --- !u!95 &7751092932033676493
 Animator:
@@ -746,7 +825,7 @@ SpriteRenderer:
   m_SortingLayerID: 159952209
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: -538044981, guid: 4f3cc40c161fe7f439098b53c75f86f0, type: 3}
+  m_Sprite: {fileID: -1529433024, guid: cf7b9e8e3688ea14c81ee3f194816b75, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

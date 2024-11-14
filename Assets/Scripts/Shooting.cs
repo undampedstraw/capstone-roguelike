@@ -33,9 +33,15 @@ public class Shooting : MonoBehaviour
         //UnityEngine.Debug.Log(rotationZ);
         transform.rotation = Quaternion.Euler(0, 0, rotationZ);
 
-        player.spriteRenderer.flipX = rotationZ > 90 || rotationZ < -90;
-        player.childSprite.flipX = rotationZ > 90 || rotationZ < -90;
-        //spriteRenderer.flipX = rotationZ > 90 || rotationZ < -90;
+        int[] directions = new int[2];
+
+        directions = lookDirection(directions, rotationZ);
+        //UnityEngine.Debug.Log("x: " + directions[0] + ", y: " + directions[1]);
+        //player.spriteRenderer.flipX = rotationZ > 90 || rotationZ < -90;
+        player.childSprite.flipX = (rotationZ > 120) || (rotationZ < -120);
+        player.animator.SetFloat("HorizontalView", directions[0]);
+        player.animator.SetFloat("VerticalView", directions[1]);
+
 
         if (!canFire)
         {
@@ -52,5 +58,41 @@ public class Shooting : MonoBehaviour
             canFire = false;
             Instantiate(bullet, bulletTransform.position, Quaternion.identity);
         }
+    }
+
+    private int[] lookDirection(int[] directions, float rotationZ)
+    {
+        if(rotationZ >= -30 && rotationZ < 30)
+        {
+            directions[0] = 0;
+            directions[1] = 0;
+        }
+        else if ((rotationZ >= 30 && rotationZ < 60) || (rotationZ >= 120 && rotationZ < 150))
+        {
+            directions[0] = 1;
+            directions[1] = 1;
+        }
+        else if (rotationZ >= 60 && rotationZ < 120)
+        {
+            directions[0] = 0;
+            directions[1] = 1;
+        }
+        else if ((rotationZ >= -60 && rotationZ < -30) || (rotationZ >= -150 && rotationZ < -120))
+        {
+            directions[0] = 1;
+            directions[1] = -1;
+        }
+        else if (rotationZ >= -120 && rotationZ < -60)
+        {
+            directions[0] = 0;
+            directions[1] = -1;
+        }
+        else
+        {
+            directions[0] = 0;
+            directions[1] = 0;
+        }
+
+        return directions;
     }
 }

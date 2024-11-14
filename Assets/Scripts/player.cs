@@ -21,7 +21,7 @@ public class player : MoverPlayer
 
     private bool canAttack = true; //cant attack during dash
 
-    private Animator animator;
+    public Animator animator;
 
     public SpriteRenderer childSprite;
 
@@ -86,6 +86,16 @@ public class player : MoverPlayer
                 move = new Vector3(lockX, lockY, 0);
             move.Normalize();
             rigidbodyPlayer.velocity = move * currentMoveSpeed;
+            if(rigidbodyPlayer.velocity != Vector2.zero)
+            {
+                //UnityEngine.Debug.Log("player is moving");
+                animator.SetBool("isMoving", true);
+            }
+            else
+            {
+                //UnityEngine.Debug.Log("player is idling");
+                animator.SetBool("isMoving", false);
+            }
         }
 
 

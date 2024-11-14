@@ -9,7 +9,6 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
-    private bool sceneChanged = false;
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -27,7 +26,6 @@ public class GameManager : MonoBehaviour
         //PlayerPrefs.DeleteAll(); //reset all data
 
         SceneManager.sceneLoaded += LoadState;
-        sceneChanged = true;
         SceneManager.sceneLoaded += OnSceneLoaded;
         DontDestroyOnLoad(gameObject);
 
