@@ -1533,7 +1533,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1554,7 +1554,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1562,6 +1562,27 @@ TextureImporter:
       bones: []
       spriteID: fd1f6cb1b6d444f479fed4b625e3d46c
       internalID: -1280620975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: health_potion
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58eb9a6dca81ea24f82749daafed9bc5
+      internalID: 2063765684
       vertices: []
       indices: 
       edges: []
@@ -1604,6 +1625,7 @@ TextureImporter:
       floor_7: -1690020632
       floor_8: 2110270683
       floor_9: -283924512
+      health_potion: 2063765684
       menu_0: -54413196
       pillar_0: -1809549845
       pillar_1: -56975538
