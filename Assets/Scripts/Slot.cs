@@ -18,6 +18,15 @@ public class Slot : MonoBehaviour
         {
             inventory.slotFull[slotID] = false;
         }
+
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            if (inventory.getSlot() == slotID)
+            {
+                UnityEngine.Debug.Log("drop item in slot ID " + slotID);
+                DropItem();
+            }
+        }
     }
     public void DropItem()
     {
