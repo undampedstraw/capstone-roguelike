@@ -66,13 +66,15 @@
     <Compile Include="Assets\Scripts\Chest.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\Mover.cs" />
+    <Compile Include="Assets\Scripts\Slot.cs" />
     <Compile Include="Assets\Scripts\Damage.cs" />
     <Compile Include="Assets\Scripts\MeleeAim.cs" />
     <Compile Include="Assets\Scripts\Portal.cs" />
-    <Compile Include="Assets\Scripts\Crate.cs" />
     <Compile Include="Assets\Scripts\Inventory.cs" />
+    <Compile Include="Assets\Scripts\Crate.cs" />
     <Compile Include="Assets\Scripts\PickUpItem.cs" />
     <Compile Include="Assets\Scripts\Boss.cs" />
+    <Compile Include="Assets\Scripts\DropItem.cs" />
     <Compile Include="Assets\Scripts\player.cs" />
     <Compile Include="Assets\Scripts\EnemyHitbox.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
@@ -86,6 +88,7 @@
     <Compile Include="Assets\Scripts\FloatingTextManager.cs" />
     <Compile Include="Assets\Scripts\NPCDialogue.cs" />
     <Compile Include="Assets\Scripts\ExMenu.cs" />
+    <Compile Include="Assets\Scripts\UseHealthPotion.cs" />
     <Compile Include="Assets\Scripts\Shooting.cs" />
     <Compile Include="Assets\Scripts\FloatingText.cs" />
   </ItemGroup>

@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 3234076429000070210}
   - component: {fileID: 5759762828841461593}
   - component: {fileID: 1883513951204897719}
+  - component: {fileID: -7204208739892639173}
+  - component: {fileID: -4024019204595323943}
   m_Layer: 5
   m_Name: HealthPotion
   m_TagString: Untagged
@@ -119,4 +121,42 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5759762828841461593}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: -4024019204595323943}
+        m_TargetAssemblyTypeName: UseHealthPotion, Assembly-CSharp
+        m_MethodName: UseItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &-7204208739892639173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9212887012714344345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e8b8859fec80114c8f7a5f53002d1b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 5928086539995879544, guid: e30697a0288ede842a740eaf60113bac, type: 3}
+--- !u!114 &-4024019204595323943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9212887012714344345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54d58dc655d44294ab0a5109f51303b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effect: {fileID: 0}

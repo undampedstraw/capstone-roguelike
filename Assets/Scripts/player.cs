@@ -155,7 +155,10 @@ public class player : MoverPlayer
     public void Heal(int healingAmount)
     {
         if (hitpoint == maxHitPoint)
+        {
+            GameManager.instance.ShowText("+0hp", 25, Color.green, transform.position, Vector3.up * 30, 1.0f);
             return;
+        }
 
         hitpoint += healingAmount;
         if (hitpoint > maxHitPoint)
