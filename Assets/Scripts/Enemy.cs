@@ -8,10 +8,12 @@ public class Enemy : Mover
 
     public float triggerLength = 1;
     public float chaseLength = 5;
+    public float enemySpeed;
     private bool chasing;
     private bool collidingWithPlayer;
     private Transform playerTransform;
     private Vector3 startingPosition;
+
 
     //hitbox
     public ContactFilter2D filter;
@@ -41,17 +43,18 @@ public class Enemy : Mover
             {
                 if(!collidingWithPlayer)
                 {
-                    UpdateMotor((playerTransform.position - transform.position).normalized);
+                    //UpdateMotor((playerTransform.position - transform.position).normalized);
+                    transform.position = Vector3.MoveTowards(this.transform.position, playerTransform.position, enemySpeed * Time.deltaTime);
                 }
             }
             else
             {
-                UpdateMotor(startingPosition - transform.position);
+                transform.position = Vector3.MoveTowards(this.transform.position, startingPosition, enemySpeed * Time.deltaTime);
             }
         }
         else
         {
-            UpdateMotor(startingPosition - transform.position);
+            transform.position = Vector3.MoveTowards(this.transform.position, startingPosition, enemySpeed * Time.deltaTime);
             chasing = false;
         }
         //collision overlaps

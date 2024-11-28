@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class UseHealthPotion : MonoBehaviour
 {
-    public GameObject effect;
+    //public GameObject effect;
     private player player;
     private Inventory inventory;
     private int invSlot;

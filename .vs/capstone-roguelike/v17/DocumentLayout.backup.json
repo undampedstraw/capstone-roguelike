@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{F32D01E6-2759-1A4F-45C6-321502C44BE3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\slot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{F32D01E6-2759-1A4F-45C6-321502C44BE3}|Assembly-CSharp.csproj|c:\\users\\yannis fu\\desktop\\unity garbage\\capstone-roguelike\\assets\\scripts\\dropitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F32D01E6-2759-1A4F-45C6-321502C44BE3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\dropitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F32D01E6-2759-1A4F-45C6-321502C44BE3}|Assembly-CSharp.csproj|C:\\Users\\Yannis Fu\\Desktop\\unity garbage\\capstone-roguelike\\assets\\scripts\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F32D01E6-2759-1A4F-45C6-321502C44BE3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -70,8 +74,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DropItem.cs",
+              "DocumentMoniker": "C:\\Users\\Yannis Fu\\Desktop\\unity garbage\\capstone-roguelike\\Assets\\Scripts\\DropItem.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\DropItem.cs",
+              "ToolTip": "C:\\Users\\Yannis Fu\\Desktop\\unity garbage\\capstone-roguelike\\Assets\\Scripts\\DropItem.cs",
+              "RelativeToolTip": "Assets\\Scripts\\DropItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T05:49:47.416Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -80,14 +97,14 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Slot.cs",
               "ToolTip": "C:\\Users\\Yannis Fu\\Desktop\\unity garbage\\capstone-roguelike\\Assets\\Scripts\\Slot.cs",
               "RelativeToolTip": "Assets\\Scripts\\Slot.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-25T04:50:27.845Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "PickUpItem.cs",
               "DocumentMoniker": "C:\\Users\\Yannis Fu\\Desktop\\unity garbage\\capstone-roguelike\\Assets\\Scripts\\PickUpItem.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PickUpItem.cs",
@@ -99,7 +116,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Inventory.cs",
               "DocumentMoniker": "C:\\Users\\Yannis Fu\\Desktop\\unity garbage\\capstone-roguelike\\Assets\\Scripts\\Inventory.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Inventory.cs",
@@ -111,7 +128,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Collidable.cs",
               "DocumentMoniker": "C:\\Users\\Yannis Fu\\Desktop\\unity garbage\\capstone-roguelike\\Assets\\Scripts\\Collidable.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Collidable.cs",
@@ -123,7 +140,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "BulletScript.cs",
               "DocumentMoniker": "C:\\Users\\Yannis Fu\\Desktop\\unity garbage\\capstone-roguelike\\Assets\\Scripts\\BulletScript.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\BulletScript.cs",
@@ -135,7 +152,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "MeleeWeapon.cs",
               "DocumentMoniker": "C:\\Users\\Yannis Fu\\Desktop\\unity garbage\\capstone-roguelike\\Assets\\Scripts\\MeleeWeapon.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\MeleeWeapon.cs",
@@ -147,7 +164,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "ExMenu.cs",
               "DocumentMoniker": "C:\\Users\\Yannis Fu\\Desktop\\unity garbage\\capstone-roguelike\\Assets\\Scripts\\ExMenu.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ExMenu.cs",
@@ -159,7 +176,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "MainMenu.cs",
               "DocumentMoniker": "C:\\Users\\Yannis Fu\\Desktop\\unity garbage\\capstone-roguelike\\Assets\\Scripts\\MainMenu.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\MainMenu.cs",
@@ -171,7 +188,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "Portal.cs",
               "DocumentMoniker": "C:\\Users\\Yannis Fu\\Desktop\\unity garbage\\capstone-roguelike\\Assets\\Scripts\\Portal.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Portal.cs",
@@ -183,7 +200,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "Crate.cs",
               "DocumentMoniker": "C:\\Users\\Yannis Fu\\Desktop\\unity garbage\\capstone-roguelike\\Assets\\Scripts\\Crate.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Crate.cs",
@@ -195,7 +212,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "MeleeAim.cs",
               "DocumentMoniker": "C:\\Users\\Yannis Fu\\Desktop\\unity garbage\\capstone-roguelike\\Assets\\Scripts\\MeleeAim.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\MeleeAim.cs",
@@ -207,7 +224,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "CameraMotor.cs",
               "DocumentMoniker": "C:\\Users\\Yannis Fu\\Desktop\\unity garbage\\capstone-roguelike\\Assets\\Scripts\\CameraMotor.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\CameraMotor.cs",
@@ -219,7 +236,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Shooting.cs",
               "DocumentMoniker": "C:\\Users\\Yannis Fu\\Desktop\\unity garbage\\capstone-roguelike\\Assets\\Scripts\\Shooting.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Shooting.cs",
@@ -231,7 +248,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "player.cs",
               "DocumentMoniker": "C:\\Users\\Yannis Fu\\Desktop\\unity garbage\\capstone-roguelike\\Assets\\Scripts\\player.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\player.cs",
@@ -243,7 +260,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "GameManager.cs",
               "DocumentMoniker": "C:\\Users\\Yannis Fu\\Desktop\\unity garbage\\capstone-roguelike\\Assets\\Scripts\\GameManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GameManager.cs",
