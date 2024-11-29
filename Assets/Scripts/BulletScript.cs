@@ -4,35 +4,48 @@ using UnityEngine;
 
 public class BulletScript : MonoBehaviour
 {
-    private Vector3 mousePosition;
-    private Camera Camera;
-    private Rigidbody2D rb2D;
     public float speed;
-    public float bulletLifetime; 
+    public float lifeTime;
+    public float distance;
+    public int damage;
+    public LayerMask whatIsSolid;
 
 
-    // Start is called before the first frame update
-    //protected override void Start()
+    public int[] damagePoint = { 1, 2, 3, 4, 5, 6, 7 };
+    public float[] pushForce = { 2.0f, 2.2f, 2.5f, 3.0f, 3.2f, 3.6f, 4.0f};
+
+    //upgrade
+    public int weaponLevel = 0;
+    public SpriteRenderer spriteRenderer;
+
     private void Start()
     {
-        //base.Start();
-        Camera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
-        rb2D = GetComponent<Rigidbody2D>();
-        mousePosition = Camera.ScreenToWorldPoint(Input.mousePosition);
-        Vector3 direction = mousePosition - transform.position;
-        Vector3 rotation = transform.position - mousePosition;
-        rb2D.velocity = new Vector2 (direction.x, direction.y).normalized * speed;
-        float rot = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0, 0, rot + 90);
-
-        //if bullet has not collided with a wall........ goes in update?
-        Destroy(gameObject, bulletLifetime);
+        Invoke("DestroyProjectile", lifeTime);
     }
 
-    // Update is called once per frame
-    //protected override void Update()
-    //{
-    //    base.Update();
-    //    //check here if bullet collided with anything. if so, delete it early
-    //}
+    private void Update()
+    {
+        RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.up, distance, whatIsSolid);
+        if (hitInfo.collider != null) {
+            if (hitInfo.collider.CompareTag("Fighter")) {
+                Damage dmg = new Damage
+                {
+                    damageAmount = damage,
+                    origin = transform.position,
+                    pushForce = 1,
+                };
+                Debug.Log("damage done");
+                hitInfo.collider.SendMessage("ReceiveDamage", dmg);
+            }
+            DestroyProjectile();
+            Debug.Log("Collison happen");
+        }
+
+
+        transform.Translate(Vector2.up * speed * Time.deltaTime);
+    }
+
+    void DestroyProjectile() {
+        Destroy(gameObject);
+    }
 }

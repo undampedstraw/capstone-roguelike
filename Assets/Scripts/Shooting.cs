@@ -4,25 +4,24 @@ using UnityEngine;
 
 public class Shooting : MonoBehaviour
 {
-    private Camera Camera;
-    private Vector3 mousePosition;
-    public GameObject bullet;
-    public Transform bulletTransform;
-    public bool canFire;
-    public float timer;
-    public float timeBetweenFiring;
+    public float offset;
 
-    private player player;
+    public GameObject projectile;
 
-    //public SpriteRenderer spriteRenderer;
+    public Transform shotPoint;
+    public Animator camAnim;
 
-    void Start()
+    private float timeBtwShots;
+    public float startTimeBtwShots;
+
+    private void Update()
     {
-        Camera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
-        player = GameObject.Find("Player").GetComponent<player>();
-        //spriteRenderer = GameObject.Find("PlayerSprite").GetComponent<SpriteRenderer>();
-    }
+        // Handles the weapon rotation
+        Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+        float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(0f, 0f, rotZ + offset);
 
+<<<<<<< Updated upstream
     // Update is called once per frame
     void Update()
     {
@@ -38,19 +37,29 @@ public class Shooting : MonoBehaviour
         //spriteRenderer.flipX = rotationZ > 90 || rotationZ < -90;
 
         if (!canFire)
+=======
+        if (timeBtwShots <= 0)
+>>>>>>> Stashed changes
         {
-            timer += Time.deltaTime;
-            if(timer > timeBetweenFiring)
+            if (Input.GetMouseButton(0))
             {
-                canFire = true;
-                timer = 0;
+                Instantiate(projectile, shotPoint.position, transform.rotation);
+                timeBtwShots = startTimeBtwShots;
             }
         }
+<<<<<<< Updated upstream
 
         if(Input.GetMouseButton(0) && canFire) //left mouse click
         {
             canFire = false;
             Instantiate(bullet, bulletTransform.position, Quaternion.identity);
         }
+=======
+        else {
+            timeBtwShots -= Time.deltaTime;
+        }
+
+       
+>>>>>>> Stashed changes
     }
 }
