@@ -45,7 +45,8 @@ public class Shooting : MonoBehaviour
 
         float rotationZ = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
         //UnityEngine.Debug.Log(rotationZ);
-        transform.rotation = Quaternion.Euler(0, 0, rotationZ + offset);
+        transform.rotation = Quaternion.Euler(0, 0, rotationZ);
+        Quaternion bulletRotation = Quaternion.Euler(0, 0, rotationZ + offset);
 
         int[] directions = new int[2];
 
@@ -62,7 +63,7 @@ public class Shooting : MonoBehaviour
         {
             if (Input.GetMouseButton(0))
             {
-                Instantiate(projectile, shotPoint.position, transform.rotation);
+                Instantiate(projectile, shotPoint.position, bulletRotation);
                 timeBtwShots = startTimeBtwShots;
             }
         }
