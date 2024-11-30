@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5514623079162297564}
   - component: {fileID: 325068807899294709}
   - component: {fileID: 3860182365096448090}
-  - component: {fileID: 4386151723044930477}
+  - component: {fileID: 5414922574883418143}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -108,7 +108,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boundX: 0.3
   boundY: 0.15
---- !u!114 &4386151723044930477
+  cursorThreshold: 0.4
+  ignoreCursorRadius: 0.2
+--- !u!114 &5414922574883418143
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

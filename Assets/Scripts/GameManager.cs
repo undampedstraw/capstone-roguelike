@@ -4,27 +4,31 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+
     private void Awake()
     {
-        if(GameManager.instance != null)
+        if (instance != null && instance != this)
         {
-            Destroy(GameManager.instance);
-            Destroy(player.gameObject);
+            //UnityEngine.Debug.Log("iuoserghsdl");
+            Destroy(gameObject);
+            //Destroy(player.gameObject);
             Destroy(floatingTextManager.gameObject);
             Destroy(hud);
             Destroy(menu);
-            return;
+            //return;
         }
-
+        else
+            instance = this;
         //PlayerPrefs.DeleteAll(); //reset all data
 
-        instance = this;
         SceneManager.sceneLoaded += LoadState;
         SceneManager.sceneLoaded += OnSceneLoaded;
-        //DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(gameObject);
+
     }
 
     //resources
@@ -34,6 +38,7 @@ public class GameManager : MonoBehaviour
     public List<int> xpTable;
 
     //references
+    [SerializeField]
     public player player;
     public MeleeWeapon weapon;
     public FloatingTextManager floatingTextManager;
@@ -126,16 +131,16 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetString("SaveState", s);
     }
 
-    public void OnSceneLoaded(Scene s, LoadSceneMode mode)
+    public void OnSceneLoaded(Scene sc, LoadSceneMode mode)
     {
         player.transform.position = GameObject.Find("SpawnPoint").transform.position;
+        ////KNOWN ISSUE: this code works but it gives a MissingReferenceException error for some reason.
+        ///This is because of player.transform.position.... despite it still being accessible?
     }
 
     public void LoadState(Scene sc, LoadSceneMode mode)
     {
         SceneManager.sceneLoaded -= LoadState;
-        //known issue: weird duplicate character issue when reentering a scene for the 2nd time. This is likely due to
-        //something with singletons or instances of the player.
 
         if (!PlayerPrefs.HasKey("SaveState"))
             return;
@@ -146,19 +151,17 @@ public class GameManager : MonoBehaviour
 
         pesos = int.Parse(data[1]);
         experience = int.Parse(data[2]);
-        if(GetCurrentLevel() != 1)
+        if (GetCurrentLevel() != 1)
+        {
             player.SetLevel(GetCurrentLevel());
+            
+        }
         weapon.SetWeaponLevel(int.Parse(data[3]));
-
-        ////chooses where player spawns based on game object in scene
-        //player.transform.position = GameObject.Find("SpawnPoint").transform.position;
     }
 
     //death menu respawn
     public void Respawn()
     {
-        //KNOWN ISSUE: OnClick() for respawn button doesn't connect to gamemanager after first respawn
-        //since gamemanager instance changes. need to find a fix
         UnityEngine.Debug.Log("RESPAWN PLAYER!");
         deathMenuAnimator.SetTrigger("Hide");
         UnityEngine.SceneManagement.SceneManager.LoadScene("Main");

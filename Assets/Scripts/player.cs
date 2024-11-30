@@ -10,7 +10,7 @@ using UnityEngine;
 //[RequireComponent(typeof(BoxCollider2D))]
 public class player : MoverPlayer
 {
-    public static player instance;
+    public static player instance { get; private set; }
     private bool isAlive = true;
 
     public bool isRolling;
@@ -21,7 +21,7 @@ public class player : MoverPlayer
 
     private bool canAttack = true; //cant attack during dash
 
-    private Animator animator;
+    public Animator animator;
 
     public SpriteRenderer childSprite;
 
@@ -36,18 +36,16 @@ public class player : MoverPlayer
 
     private void Awake()
     {
-        if (instance != null)
+        if (instance != null && instance != this)
         {
 
             Destroy(gameObject);
-            instance = this;
             //DontDestroyOnLoad(gameObject);
             //instance = this;????????
         }
         else
         {
             instance = this;
-            //DontDestroyOnLoad(gameObject);
         }
     }
 
@@ -88,6 +86,16 @@ public class player : MoverPlayer
                 move = new Vector3(lockX, lockY, 0);
             move.Normalize();
             rigidbodyPlayer.velocity = move * currentMoveSpeed;
+            if(rigidbodyPlayer.velocity != Vector2.zero)
+            {
+                //UnityEngine.Debug.Log("player is moving");
+                animator.SetBool("isMoving", true);
+            }
+            else
+            {
+                //UnityEngine.Debug.Log("player is idling");
+                animator.SetBool("isMoving", false);
+            }
         }
 
 
@@ -147,7 +155,10 @@ public class player : MoverPlayer
     public void Heal(int healingAmount)
     {
         if (hitpoint == maxHitPoint)
+        {
+            GameManager.instance.ShowText("+0hp", 25, Color.green, transform.position, Vector3.up * 30, 1.0f);
             return;
+        }
 
         hitpoint += healingAmount;
         if (hitpoint > maxHitPoint)

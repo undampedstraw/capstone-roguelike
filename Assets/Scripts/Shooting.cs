@@ -14,6 +14,16 @@ public class Shooting : MonoBehaviour
 
     private player player;
 
+    public float offset;
+
+    public GameObject projectile;
+
+    public Transform shotPoint;
+    public Animator camAnim;
+
+    private float timeBtwShots;
+    public float startTimeBtwShots;
+
     //public SpriteRenderer spriteRenderer;
 
     void Start()
@@ -26,31 +36,75 @@ public class Shooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+        //float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
+        //transform.rotation = Quaternion.Euler(0f, 0f, rotZ + offset);
+
         mousePosition = Camera.ScreenToWorldPoint(Input.mousePosition);
         Vector3 rotation = mousePosition - transform.position;
 
         float rotationZ = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
         //UnityEngine.Debug.Log(rotationZ);
-        transform.rotation = Quaternion.Euler(0, 0, rotationZ);
+        transform.rotation = Quaternion.Euler(0, 0, rotationZ + offset);
 
-        player.spriteRenderer.flipX = rotationZ > 90 || rotationZ < -90;
-        player.childSprite.flipX = rotationZ > 90 || rotationZ < -90;
-        //spriteRenderer.flipX = rotationZ > 90 || rotationZ < -90;
+        int[] directions = new int[2];
 
-        if (!canFire)
+        directions = lookDirection(directions, rotationZ);
+        //UnityEngine.Debug.Log("x: " + directions[0] + ", y: " + directions[1]);
+        //player.spriteRenderer.flipX = rotationZ > 90 || rotationZ < -90;
+        player.childSprite.flipX = (rotationZ > 120) || (rotationZ < -120);
+        player.animator.SetFloat("HorizontalView", directions[0]);
+        player.animator.SetFloat("VerticalView", directions[1]);
+
+
+
+        if (timeBtwShots <= 0)
         {
-            timer += Time.deltaTime;
-            if(timer > timeBetweenFiring)
+            if (Input.GetMouseButton(0))
             {
-                canFire = true;
-                timer = 0;
+                Instantiate(projectile, shotPoint.position, transform.rotation);
+                timeBtwShots = startTimeBtwShots;
             }
         }
-
-        if(Input.GetMouseButton(0) && canFire) //left mouse click
+        else
         {
-            canFire = false;
-            Instantiate(bullet, bulletTransform.position, Quaternion.identity);
+            timeBtwShots -= Time.deltaTime;
         }
+    }
+
+    private int[] lookDirection(int[] directions, float rotationZ)
+    {
+        if(rotationZ >= -30 && rotationZ < 30)
+        {
+            directions[0] = 0;
+            directions[1] = 0;
+        }
+        else if ((rotationZ >= 30 && rotationZ < 60) || (rotationZ >= 120 && rotationZ < 150))
+        {
+            directions[0] = 1;
+            directions[1] = 1;
+        }
+        else if (rotationZ >= 60 && rotationZ < 120)
+        {
+            directions[0] = 0;
+            directions[1] = 1;
+        }
+        else if ((rotationZ >= -60 && rotationZ < -30) || (rotationZ >= -150 && rotationZ < -120))
+        {
+            directions[0] = 1;
+            directions[1] = -1;
+        }
+        else if (rotationZ >= -120 && rotationZ < -60)
+        {
+            directions[0] = 0;
+            directions[1] = -1;
+        }
+        else
+        {
+            directions[0] = 0;
+            directions[1] = 0;
+        }
+
+        return directions;
     }
 }
