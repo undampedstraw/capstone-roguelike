@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8939798798015943372}
-  - component: {fileID: 3991278874901946844}
   - component: {fileID: 772588966875449403}
   - component: {fileID: 5062862984294575578}
   - component: {fileID: 1288746076589369133}
@@ -36,42 +35,6 @@ Transform:
   - {fileID: 6692470497576835595}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3991278874901946844
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1169813802585893407}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73d7fe45c229a9446bdbef46aefec061, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hitpoint: 10
-  maxHitPoint: 10
-  pushRecoverySpeed: 0.2
-  ySpeed: 0.75
-  xSpeed: 1
-  spriteRenderer: {fileID: 0}
-  xpValue: 1
-  triggerLength: 1
-  chaseLength: 5
-  enemySpeed: 0.16
-  filter:
-    useTriggers: 0
-    useLayerMask: 0
-    useDepth: 0
-    useOutsideDepth: 0
-    useNormalAngle: 0
-    useOutsideNormalAngle: 0
-    layerMask:
-      serializedVersion: 2
-      m_Bits: 0
-    minDepth: 0
-    maxDepth: 0
-    minNormalAngle: 0
-    maxNormalAngle: 0
 --- !u!212 &772588966875449403
 SpriteRenderer:
   m_ObjectHideFlags: 0
