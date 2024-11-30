@@ -20,6 +20,9 @@ public class Enemy : Mover
     protected BoxCollider2D hitbox;
     protected Collider2D[] hits = new Collider2D[10];
 
+    // Slow effect variables
+    private bool isSlowed = false;          // To check if the enemy is slowed
+
     protected override void Start()
     {
         base.Start();
@@ -86,5 +89,31 @@ public class Enemy : Mover
             transform.position = Vector3.MoveTowards(this.transform.position, startingPosition, enemySpeed * Time.deltaTime);
             chasing = false;
         }
+    }
+
+    // Method to apply the slow effect
+    public void ApplySlowEffect(float slowDuration)
+    {
+        if (!isSlowed)
+        {
+            StartCoroutine(SlowEffectCoroutine(slowDuration));  // Start the coroutine to apply the slow effect
+        }
+    }
+
+    // Coroutine to handle the slow effect duration and revert the changes
+    private IEnumerator SlowEffectCoroutine(float duration)
+    {
+        isSlowed = true;
+
+        // Change sprite color to blue to indicate slow effect
+        spriteRenderer.color = Color.blue;
+
+        // Wait for the duration of the slow effect
+        yield return new WaitForSeconds(duration);
+
+        // Revert back to normal speed and sprite color
+        isSlowed = false;
+        enemySpeed = 5f;  // Set back to original speed (or any default speed)
+        spriteRenderer.color = Color.white;  // Reset sprite color
     }
 }

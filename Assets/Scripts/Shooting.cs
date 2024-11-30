@@ -14,6 +14,16 @@ public class Shooting : MonoBehaviour
 
     private player player;
 
+    public float offset;
+
+    public GameObject projectile;
+
+    public Transform shotPoint;
+    public Animator camAnim;
+
+    private float timeBtwShots;
+    public float startTimeBtwShots;
+
     //public SpriteRenderer spriteRenderer;
 
     void Start()
@@ -26,12 +36,16 @@ public class Shooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+        //float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
+        //transform.rotation = Quaternion.Euler(0f, 0f, rotZ + offset);
+
         mousePosition = Camera.ScreenToWorldPoint(Input.mousePosition);
         Vector3 rotation = mousePosition - transform.position;
 
         float rotationZ = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
         //UnityEngine.Debug.Log(rotationZ);
-        transform.rotation = Quaternion.Euler(0, 0, rotationZ);
+        transform.rotation = Quaternion.Euler(0, 0, rotationZ + offset);
 
         int[] directions = new int[2];
 
@@ -43,20 +57,18 @@ public class Shooting : MonoBehaviour
         player.animator.SetFloat("VerticalView", directions[1]);
 
 
-        if (!canFire)
+
+        if (timeBtwShots <= 0)
         {
-            timer += Time.deltaTime;
-            if(timer > timeBetweenFiring)
+            if (Input.GetMouseButton(0))
             {
-                canFire = true;
-                timer = 0;
+                Instantiate(projectile, shotPoint.position, transform.rotation);
+                timeBtwShots = startTimeBtwShots;
             }
         }
-
-        if(Input.GetMouseButton(0) && canFire) //left mouse click
+        else
         {
-            canFire = false;
-            Instantiate(bullet, bulletTransform.position, Quaternion.identity);
+            timeBtwShots -= Time.deltaTime;
         }
     }
 

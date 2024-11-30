@@ -17858,6 +17858,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 874505686}
   m_CullTransparentMesh: 1
+--- !u!1 &901070865 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7826555239018452250, guid: 7ceb92d5fb4cbe7448dbdd09c4239b2b, type: 3}
+  m_PrefabInstance: {fileID: 479561815191605220}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &923087120
 GameObject:
   m_ObjectHideFlags: 0
@@ -81170,8 +81175,8 @@ MonoBehaviour:
   xSpeed: 1
   spriteRenderer: {fileID: 0}
   xpValue: 1
-  triggerLength: 1
-  chaseLength: 5
+  triggerLength: 1.5
+  chaseLength: 2
   enemySpeed: 0.16
   filter:
     useTriggers: 0
@@ -81187,7 +81192,8 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
-  chargeSpeed: 48
+  chargeSpeed: 1.44
+  chargeCooldown: 0.75
 --- !u!1 &1816860327
 GameObject:
   m_ObjectHideFlags: 0
@@ -84856,6 +84862,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1039159752025870883, guid: 7ceb92d5fb4cbe7448dbdd09c4239b2b, type: 3}
+      propertyPath: airElement
+      value: 
+      objectReference: {fileID: 901070865}
+    - target: {fileID: 1039159752025870883, guid: 7ceb92d5fb4cbe7448dbdd09c4239b2b, type: 3}
+      propertyPath: iceElement
+      value: 
+      objectReference: {fileID: 901070865}
+    - target: {fileID: 1039159752025870883, guid: 7ceb92d5fb4cbe7448dbdd09c4239b2b, type: 3}
+      propertyPath: fireElement
+      value: 
+      objectReference: {fileID: 901070865}
+    - target: {fileID: 1039159752025870883, guid: 7ceb92d5fb4cbe7448dbdd09c4239b2b, type: 3}
+      propertyPath: natureElement
+      value: 
+      objectReference: {fileID: 901070865}
+    - target: {fileID: 4375452949695478734, guid: 7ceb92d5fb4cbe7448dbdd09c4239b2b, type: 3}
+      propertyPath: offset
+      value: -90
+      objectReference: {fileID: 0}
     - target: {fileID: 5855341106919425762, guid: 7ceb92d5fb4cbe7448dbdd09c4239b2b, type: 3}
       propertyPath: m_Name
       value: Player
@@ -84899,6 +84925,10 @@ PrefabInstance:
     - target: {fileID: 8279646941372313882, guid: 7ceb92d5fb4cbe7448dbdd09c4239b2b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8673013324264450749, guid: 7ceb92d5fb4cbe7448dbdd09c4239b2b, type: 3}
+      propertyPath: offset
+      value: -90
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -85391,11 +85421,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8444000653074740961, guid: 25810c2cc645b864a8c631613e459b21, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.845
+      value: -13.98
       objectReference: {fileID: 0}
     - target: {fileID: 8444000653074740961, guid: 25810c2cc645b864a8c631613e459b21, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.259
+      value: -0.423
       objectReference: {fileID: 0}
     - target: {fileID: 8444000653074740961, guid: 25810c2cc645b864a8c631613e459b21, type: 3}
       propertyPath: m_LocalPosition.z

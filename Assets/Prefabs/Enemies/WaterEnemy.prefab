@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3935039045878981029}
   - component: {fileID: 8578590334818508835}
   - component: {fileID: 1889160939548035767}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WaterEnemy
   m_TagString: Fighter
   m_Icon: {fileID: 0}
@@ -201,7 +201,7 @@ GameObject:
   - component: {fileID: 6075020259582918385}
   - component: {fileID: 6300432117126587667}
   - component: {fileID: 167755312198815772}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HitBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}

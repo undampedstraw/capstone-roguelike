@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 772588966875449403}
   - component: {fileID: 5062862984294575578}
   - component: {fileID: 1288746076589369133}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: NatureEnemy
   m_TagString: Fighter
   m_Icon: {fileID: 0}
@@ -164,7 +164,7 @@ GameObject:
   - component: {fileID: 6692470497576835595}
   - component: {fileID: 5939484739516198253}
   - component: {fileID: 34660080585357358}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Hitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3446342400279706075}
   - component: {fileID: 4438580385877777677}
   - component: {fileID: 1644127381941053700}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: AirEnemy
   m_TagString: Fighter
   m_Icon: {fileID: 0}
@@ -201,7 +201,7 @@ GameObject:
   - component: {fileID: 5534279411021523865}
   - component: {fileID: 823680588205429047}
   - component: {fileID: 2674082288212256373}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Hitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -8,9 +8,23 @@ public class MeleeAim : MonoBehaviour
     private Camera Camera;
     public bool isAttacking;
 
+    public GameObject rangedWeapon;  // Reference to your ranged weapon GameObject
+    public GameObject meleeWeapon;   // Reference to your melee weapon GameObject
+
+    public GameObject basicElement;
+    public GameObject iceElement;
+    public GameObject fireElement;
+    public GameObject natureElement;
+    public GameObject airElement;
+
+    private GameObject currentElement;
+
     private void Start()
     {
         Camera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        rangedWeapon.SetActive(false);
+        DeactivateAllElements();
+        currentElement = basicElement;
     }
 
     private void Update()
@@ -28,10 +42,85 @@ public class MeleeAim : MonoBehaviour
         else
             weaponScale.y = 1;
         transform.localScale = weaponScale;
+
+        if (Input.GetMouseButton(0))
+        {
+            rangedWeapon = currentElement;
+            ActivateRangedWeapon();
+        }
+
+        else if (Input.GetMouseButton(1))
+        {
+            ActivateMeleeWeapon();
+        }
     }
 
     public void resetIsAttacking()
     {
         isAttacking = false;
+    }
+
+    void ActivateRangedWeapon()
+    {
+        // Activate the ranged weapon and deactivate the melee weapon
+        if (rangedWeapon != null && !rangedWeapon.activeInHierarchy)
+        {
+            rangedWeapon.SetActive(true);
+        }
+
+        if (meleeWeapon != null && meleeWeapon.activeInHierarchy)
+        {
+            meleeWeapon.SetActive(false);
+        }
+    }
+
+    void ActivateMeleeWeapon()
+    {
+        // Activate the melee weapon and deactivate the ranged weapon
+        if (meleeWeapon != null && !meleeWeapon.activeInHierarchy)
+        {
+            meleeWeapon.SetActive(true);
+        }
+
+        if (rangedWeapon != null && rangedWeapon.activeInHierarchy)
+        {
+            rangedWeapon.SetActive(false);
+        }
+    }
+
+    public void SetCurrentElement(int elementIndex)
+    {
+
+        // Activate the selected element based on the index
+        switch (elementIndex)
+        {
+            case 1:
+                currentElement = basicElement;
+                break;
+            case 2:
+                currentElement = fireElement;
+                break;
+            case 3:
+                currentElement = iceElement;
+                break;
+            case 4:
+                currentElement = airElement;
+                break;
+            case 5:
+                currentElement = natureElement;
+                break;
+            default:
+                Debug.LogWarning("Invalid element index!");
+                break;
+        }
+    }
+
+    private void DeactivateAllElements()
+    {
+        basicElement.SetActive(false);
+        iceElement.SetActive(false);
+        fireElement.SetActive(false);
+        natureElement.SetActive(false);
+        airElement.SetActive(false);
     }
 }
