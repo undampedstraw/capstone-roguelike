@@ -24,7 +24,7 @@ public class MeleeAim : MonoBehaviour
         Camera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         rangedWeapon.SetActive(false);
         DeactivateAllElements();
-        currentElement = iceElement;
+        currentElement = basicElement;
     }
 
     private void Update()
