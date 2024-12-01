@@ -10,12 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 4043540204926396863}
   - component: {fileID: 1918525823126289393}
-  - component: {fileID: 1675857224306211842}
   - component: {fileID: 5816685720729266573}
   - component: {fileID: -5801064261734981142}
+  - component: {fileID: 4821017171943513406}
   m_Layer: 9
-  m_Name: Bullet
-  m_TagString: Untagged
+  m_Name: EnemyFrozenBullet
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -427266638, guid: 4f3cc40c161fe7f439098b53c75f86f0, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 1, b: 0.96275425, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -87,36 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1675857224306211842
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6307296456470346860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ef74c576b9fb6d48a22c4aafff462ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 2.5
-  lifeTime: 1
-  distance: 0.01
-  damage: 1
-  whatIsSolid:
-    serializedVersion: 2
-    m_Bits: 768
-  damagePoint: 01000000020000000300000004000000050000000600000007000000
-  pushForce:
-  - 2
-  - 2.2
-  - 2.5
-  - 3
-  - 3.2
-  - 3.6
-  - 4
-  weaponLevel: 1
-  spriteRenderer: {fileID: 0}
 --- !u!50 &5816685720729266573
 Rigidbody2D:
   serializedVersion: 4
@@ -189,3 +159,33 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.05050505, y: 0.05050505}
   m_EdgeRadius: 0
+--- !u!114 &4821017171943513406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6307296456470346860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48fa76b5075350d42bed2d0e69d4df2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2.5
+  lifeTime: 1
+  distance: 0.1
+  damage: 1
+  whatIsSolid:
+    serializedVersion: 2
+    m_Bits: 768
+  damagePoint: 01000000020000000300000004000000050000000600000007000000
+  pushForce:
+  - 2
+  - 2.2
+  - 2.5
+  - 3
+  - 3.2
+  - 3.6
+  - 4
+  weaponLevel: 1
+  spriteRenderer: {fileID: 0}

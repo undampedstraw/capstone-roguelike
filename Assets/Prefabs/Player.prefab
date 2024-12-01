@@ -400,7 +400,7 @@ MonoBehaviour:
   projectile: {fileID: 6307296456470346860, guid: dbea2b94feac1fe4482609615e1379f1, type: 3}
   shotPoint: {fileID: 2098604212527651192}
   camAnim: {fileID: 0}
-  startTimeBtwShots: 0.25
+  startTimeBtwShots: 0.5
 --- !u!1 &5016365805742222080
 GameObject:
   m_ObjectHideFlags: 0
@@ -594,6 +594,7 @@ MonoBehaviour:
   hitpoint: 10
   maxHitPoint: 10
   pushRecoverySpeed: 0.2
+  immuneTime: 0.5
   rigidbodyPlayer: {fileID: 0}
   moveSpeed: 1
   spriteRenderer: {fileID: 6190485214669066760}

@@ -18,15 +18,17 @@ public class FrozenBulletScript : MonoBehaviour
     public int weaponLevel = 0;
     public SpriteRenderer spriteRenderer;
 
-    private void Start()
+    protected virtual void Start()
     {
         Invoke("DestroyProjectile", lifeTime);
     }
 
-    private void Update()
+    protected virtual void Update()
     {
         RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.up, distance, whatIsSolid);
         if (hitInfo.collider != null) {
+            if (hitInfo.collider.CompareTag("Bullet"))
+                return;
             if (hitInfo.collider.CompareTag("Fighter")) {
                 Damage dmg = new Damage
                 {
@@ -34,19 +36,19 @@ public class FrozenBulletScript : MonoBehaviour
                     origin = transform.position,
                     pushForce = 1,
                 };
-                Debug.Log("damage done");
+                //Debug.Log("damage done");
                 hitInfo.collider.SendMessage("ReceiveDamage", dmg);
                 hitInfo.collider.SendMessage("ApplySlowEffect", 3f);
             }
             DestroyProjectile();
-            Debug.Log("Collison happen");
+            //Debug.Log("Collison happen");
         }
 
 
         transform.Translate(Vector2.up * speed * Time.deltaTime);
     }
 
-    void DestroyProjectile() {
+    protected void DestroyProjectile() {
         Destroy(gameObject);
     }
 }

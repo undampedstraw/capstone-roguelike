@@ -171,6 +171,8 @@ public class player : MoverPlayer
     {
         if (!isAlive)
             return;
+        if (isRolling)
+            return;
         base.ReceiveDamage(dmg);
         GameManager.instance.OnHitpointChange();
     }
