@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4194837037989128350}
   - component: {fileID: 4483785816561613564}
-  - component: {fileID: 3446342400279706075}
   - component: {fileID: 4438580385877777677}
   - component: {fileID: 1644127381941053700}
   m_Layer: 9
@@ -88,43 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3446342400279706075
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1979001750852225536}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73d7fe45c229a9446bdbef46aefec061, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hitpoint: 10
-  maxHitPoint: 10
-  pushRecoverySpeed: 0.2
-  immuneTime: 0.25
-  ySpeed: 0.75
-  xSpeed: 1
-  spriteRenderer: {fileID: 0}
-  xpValue: 1
-  triggerLength: 1
-  chaseLength: 5
-  enemySpeed: 0.1
-  filter:
-    useTriggers: 0
-    useLayerMask: 0
-    useDepth: 0
-    useOutsideDepth: 0
-    useNormalAngle: 0
-    useOutsideNormalAngle: 0
-    layerMask:
-      serializedVersion: 2
-      m_Bits: 0
-    minDepth: 0
-    maxDepth: 0
-    minNormalAngle: 0
-    maxNormalAngle: 0
 --- !u!61 &4438580385877777677
 BoxCollider2D:
   m_ObjectHideFlags: 0
