@@ -73,6 +73,7 @@
     <Compile Include="Assets\Scripts\Inventory.cs" />
     <Compile Include="Assets\Scripts\Crate.cs" />
     <Compile Include="Assets\Scripts\PickUpItem.cs" />
+    <Compile Include="Assets\Scripts\EnemyScripts\AirEnemy.cs" />
     <Compile Include="Assets\Scripts\Boss.cs" />
     <Compile Include="Assets\Scripts\DropItem.cs" />
     <Compile Include="Assets\Scripts\player.cs" />

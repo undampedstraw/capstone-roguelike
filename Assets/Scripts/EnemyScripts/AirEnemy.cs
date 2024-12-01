@@ -2,17 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WaterEnemy : Enemy
+public class AirEnemy : Enemy
 {
     public GameObject projectile;
 
     private float timeBtwShots;
     public float startTimeBtwShots;
 
-    private float[] bulletPattern = {0f, 45f, 90f, 135f, 180f, -45f, -90f, -135f};
-    private float angleMod = 22.5f;
-    private int angleFlag = 0;
-    
+    public float attackPatternCooldown;
+    private float attackPatternTime;
+    private bool pauseAttack = false;
+    private int BulletFlag = 0;
+
 
     protected override void Start()
     {
@@ -26,6 +27,11 @@ public class WaterEnemy : Enemy
 
     protected override void followPlayer()
     {
+        Vector3 bulletDirection = playerTransform.position - transform.position;
+        bulletDirection.Normalize();
+
+        float angleBetween = Mathf.Atan2(bulletDirection.y, bulletDirection.x) * Mathf.Rad2Deg;
+
         //check if player is within chase length
         if (Vector3.Distance(playerTransform.position, startingPosition) < chaseLength)
         {
@@ -39,21 +45,28 @@ public class WaterEnemy : Enemy
                     //UpdateMotor((playerTransform.position - transform.position).normalized);
                     transform.position = Vector3.MoveTowards(this.transform.position, playerTransform.position, enemySpeed * Time.deltaTime);
                 }
+                if (pauseAttack)
+                {
+                    if (Time.time - attackPatternTime < attackPatternCooldown)
+                    {
+                        return;
+                    }
+                    else
+                        pauseAttack = false;
+                }
+
                 if (timeBtwShots <= 0)
                 {
-                    foreach (int angle in bulletPattern)
-                    {
-                        Quaternion bulletRotation;
-                        if (angleFlag % 2 == 0)
-                            bulletRotation = Quaternion.Euler(0, 0, angle + angleMod);
-                        else
-                            bulletRotation = Quaternion.Euler(0, 0, angle);
-                        Instantiate(projectile, transform.position, bulletRotation);
-                    }
+
+                    Instantiate(projectile, transform.position, Quaternion.Euler(0, 0, angleBetween - 90f));
 
                     timeBtwShots = startTimeBtwShots;
-                    UnityEngine.Debug.Log("shoot bullet");
-                    angleFlag++;
+                    BulletFlag++;
+                    if (BulletFlag % 3 == 0)
+                    {
+                        pauseAttack = true;
+                        attackPatternTime = Time.time;
+                    }
                 }
                 else
                 {
@@ -70,6 +83,10 @@ public class WaterEnemy : Enemy
             transform.position = Vector3.MoveTowards(this.transform.position, startingPosition, enemySpeed * Time.deltaTime);
             chasing = false;
         }
+
+        
+
+        //UnityEngine.Debug.Log(angleBetween);
 
         
     }
