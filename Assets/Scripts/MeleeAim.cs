@@ -24,7 +24,7 @@ public class MeleeAim : MonoBehaviour
         Camera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         rangedWeapon.SetActive(false);
         DeactivateAllElements();
-        currentElement = basicElement;
+        currentElement = iceElement;
     }
 
     private void Update()
@@ -37,10 +37,15 @@ public class MeleeAim : MonoBehaviour
         transform.rotation = Quaternion.Euler(0, 0, rotationZ);
 
         Vector3 weaponScale = transform.localScale;
+        //Vector3 wandScale = 
         if (rotationZ > 90 || rotationZ < -90)
+        {
             weaponScale.y = -1;
+        } 
         else
+        {
             weaponScale.y = 1;
+        }
         transform.localScale = weaponScale;
 
         if (Input.GetMouseButton(0))
