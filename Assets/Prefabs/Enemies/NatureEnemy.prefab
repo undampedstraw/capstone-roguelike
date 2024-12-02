@@ -48,16 +48,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41ff550e408dc644385f005107acc8c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitpoint: 10
-  maxHitPoint: 10
+  hitpoint: 5
+  maxHitPoint: 5
   pushRecoverySpeed: 0.2
   immuneTime: 0.25
   ySpeed: 0.75
   xSpeed: 1
   spriteRenderer: {fileID: 0}
   xpValue: 1
-  triggerLength: 1.5
-  chaseLength: 2
+  triggerLength: 1
+  chaseLength: 1.5
   enemySpeed: 0.16
   filter:
     useTriggers: 0

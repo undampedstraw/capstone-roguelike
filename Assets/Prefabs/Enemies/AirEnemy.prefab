@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4483785816561613564}
   - component: {fileID: 4438580385877777677}
   - component: {fileID: 1644127381941053700}
+  - component: {fileID: 6980025147758577310}
   m_Layer: 9
   m_Name: AirEnemy
   m_TagString: Fighter
@@ -153,6 +154,46 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6980025147758577310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1979001750852225536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61b8caeb7f61b6840b80152e8f4735da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitpoint: 4
+  maxHitPoint: 4
+  pushRecoverySpeed: 0.2
+  immuneTime: 0.25
+  ySpeed: 0.75
+  xSpeed: 1
+  spriteRenderer: {fileID: 0}
+  xpValue: 1
+  triggerLength: 2
+  chaseLength: 3
+  enemySpeed: 0.32
+  filter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 0
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
+  projectile: {fileID: 6307296456470346860, guid: 0feab0663aa48ea4c9ce28c598bb7a17, type: 3}
+  startTimeBtwShots: 0.12
+  attackPatternCooldown: 0.45
 --- !u!1 &7165413234024626825
 GameObject:
   m_ObjectHideFlags: 0
@@ -218,7 +259,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0049190223, y: 0.007767603}
+  m_Offset: {x: 0.007153511, y: 0.00888449}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -229,7 +270,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.124421775, y: 0.13503805}
+  m_Size: {x: 0.105062485, y: 0.12089121}
   m_EdgeRadius: 0
 --- !u!114 &2674082288212256373
 MonoBehaviour:

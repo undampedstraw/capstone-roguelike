@@ -164,7 +164,7 @@ public class GameManager : MonoBehaviour
     {
         UnityEngine.Debug.Log("RESPAWN PLAYER!");
         deathMenuAnimator.SetTrigger("Hide");
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Main");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Presentation");
         player.Respawn();
     }
 }
