@@ -100,17 +100,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c30d14790fc9f24f8448b8a2c3d67b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitpoint: 10
-  maxHitPoint: 10
+  hitpoint: 3
+  maxHitPoint: 3
   pushRecoverySpeed: 0.2
   immuneTime: 0.25
   ySpeed: 0.75
   xSpeed: 1
   spriteRenderer: {fileID: 0}
   xpValue: 1
-  triggerLength: 1.5
-  chaseLength: 2
-  enemySpeed: 0.16
+  triggerLength: 1.25
+  chaseLength: 1.75
+  enemySpeed: 0.12
   filter:
     useTriggers: 0
     useLayerMask: 0
@@ -126,7 +126,7 @@ MonoBehaviour:
     minNormalAngle: 0
     maxNormalAngle: 0
   projectile: {fileID: 6307296456470346860, guid: 9755492b89542db4e85d2eb2de125f5b, type: 3}
-  startTimeBtwShots: 0.65
+  startTimeBtwShots: 1.25
 --- !u!61 &3935039045878981029
 BoxCollider2D:
   m_ObjectHideFlags: 0

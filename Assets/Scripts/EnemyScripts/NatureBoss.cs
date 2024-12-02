@@ -75,7 +75,6 @@ public class NatureBoss : Enemy
     {
         if (pattern2Count == numPattern2)
         {
-            UnityEngine.Debug.Log("STOP ATTACK!");
             pattern2Active = false;
             pattern2Count = 0;
         }
@@ -166,7 +165,6 @@ public class NatureBoss : Enemy
                         pauseAttack = true;
                         attackPatternTime = Time.time;
                         pattern2Count++;
-                        UnityEngine.Debug.Log("hi");
                     }
                 }
                 else
