@@ -9,11 +9,16 @@ public class Enemy : Mover
     public float triggerLength = 1;
     public float chaseLength = 5;
     public float enemySpeed;
+    private float originalSpeed;
     protected bool chasing;
     protected bool collidingWithPlayer;
     protected Transform playerTransform;
     protected Vector3 startingPosition;
-
+    
+    public virtual bool isFire { get; protected set; } = false;
+    public virtual bool isWater { get; protected set; } = false;
+    public virtual bool isNature { get; protected set; } = false;
+    public virtual bool isAir { get; protected set; } = false;
 
     //hitbox
     public ContactFilter2D filter;
@@ -104,6 +109,8 @@ public class Enemy : Mover
     private IEnumerator SlowEffectCoroutine(float duration)
     {
         isSlowed = true;
+        originalSpeed = enemySpeed;
+        enemySpeed *= 0.4f;
 
         // Change sprite color to blue to indicate slow effect
         spriteRenderer.color = Color.blue;
@@ -113,7 +120,39 @@ public class Enemy : Mover
 
         // Revert back to normal speed and sprite color
         isSlowed = false;
-        enemySpeed = 5f;  // Set back to original speed (or any default speed)
+        enemySpeed = originalSpeed;  // Set back to original speed (or any default speed)
         spriteRenderer.color = Color.white;  // Reset sprite color
     }
+
+    public void ApplyFireEffect()
+    {
+    StartCoroutine(FireEffectCoroutine());
+    }
+
+    private IEnumerator FireEffectCoroutine()
+    {
+        float elapsed = 0f;
+        spriteRenderer.color = Color.red;
+
+        while (elapsed < 5)
+        {
+            // Apply damage every second
+            Damage fireDamage = new Damage
+            {
+                damageAmount = 1,
+                origin = transform.position,
+                pushForce = 0 // Fire effect doesn't push the enemy
+            };
+
+            ReceiveDamage(fireDamage); // Use ReceiveDamage to apply the damage logic
+            elapsed += 1f;
+
+            // Wait for 1 second
+            yield return new WaitForSeconds(1f);
+        }
+        spriteRenderer.color = Color.white;
+    }
+
+    
 }
+

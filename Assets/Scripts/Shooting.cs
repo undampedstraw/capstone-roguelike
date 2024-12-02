@@ -71,8 +71,22 @@ public class Shooting : MonoBehaviour
         {
             timeBtwShots -= Time.deltaTime;
         }
+
     }
 
+
+    private void FireWindVolley(float baseRotationZ)
+    {
+        float spreadAngle = 15f; // The angle of deviation for the side bullets
+        Quaternion centerRotation = Quaternion.Euler(0, 0, baseRotationZ);
+        Quaternion leftRotation = Quaternion.Euler(0, 0, baseRotationZ - spreadAngle);
+        Quaternion rightRotation = Quaternion.Euler(0, 0, baseRotationZ + spreadAngle);
+
+        Instantiate(projectile, shotPoint.position, centerRotation); // Center bullet
+        Instantiate(projectile, shotPoint.position, leftRotation);   // Left bullet
+        Instantiate(projectile, shotPoint.position, rightRotation); // Right bullet
+    }
+    
     private int[] lookDirection(int[] directions, float rotationZ)
     {
         if(rotationZ >= -30 && rotationZ < 30)

@@ -12,7 +12,7 @@ public class MeleeAim : MonoBehaviour
     public GameObject meleeWeapon;   // Reference to your melee weapon GameObject
 
     public GameObject basicElement;
-    public GameObject iceElement;
+    public GameObject waterElement;
     public GameObject fireElement;
     public GameObject natureElement;
     public GameObject airElement;
@@ -24,7 +24,7 @@ public class MeleeAim : MonoBehaviour
         Camera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         rangedWeapon.SetActive(false);
         DeactivateAllElements();
-        currentElement = basicElement;
+        currentElement = waterElement;
     }
 
     private void Update()
@@ -106,7 +106,7 @@ public class MeleeAim : MonoBehaviour
                 currentElement = fireElement;
                 break;
             case 3:
-                currentElement = iceElement;
+                currentElement = waterElement;
                 break;
             case 4:
                 currentElement = airElement;
@@ -123,7 +123,7 @@ public class MeleeAim : MonoBehaviour
     private void DeactivateAllElements()
     {
         basicElement.SetActive(false);
-        iceElement.SetActive(false);
+        waterElement.SetActive(false);
         fireElement.SetActive(false);
         natureElement.SetActive(false);
         airElement.SetActive(false);

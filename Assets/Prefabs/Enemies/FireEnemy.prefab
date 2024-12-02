@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3132828078220196991}
   - component: {fileID: 2723747022000813323}
   - component: {fileID: 3690577628234391057}
-  - component: {fileID: 7092356192155498378}
+  - component: {fileID: 6801507113622401721}
   m_Layer: 9
   m_Name: FireEnemy
   m_TagString: Fighter
@@ -154,7 +154,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.10460928, y: 0.124391705}
   m_EdgeRadius: 0
---- !u!114 &7092356192155498378
+--- !u!114 &6801507113622401721
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -163,7 +163,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3653404154153391404}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73d7fe45c229a9446bdbef46aefec061, type: 3}
+  m_Script: {fileID: 11500000, guid: 5e2b5fb973394a6489e017fdccb3963e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hitpoint: 4

@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class FireEnemy : Enemy
 {
-    //public override bool isFire => true;
+    public override bool isFire => true;
 }

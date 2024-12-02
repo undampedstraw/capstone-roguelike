@@ -14,6 +14,7 @@ public class AirEnemy : Enemy
     private bool pauseAttack = false;
     private int BulletFlag = 0;
 
+    public override bool isAir => true;
 
     protected override void Start()
     {

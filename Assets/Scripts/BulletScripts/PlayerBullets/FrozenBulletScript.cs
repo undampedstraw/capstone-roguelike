@@ -26,22 +26,48 @@ public class FrozenBulletScript : MonoBehaviour
     protected virtual void Update()
     {
         RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.up, distance, whatIsSolid);
+
         if (hitInfo.collider != null) {
+
+            Enemy enemy = hitInfo.collider.GetComponent<Enemy>();
             if (hitInfo.collider.CompareTag("Bullet"))
                 return;
             if (hitInfo.collider.CompareTag("Fighter")) {
-                Damage dmg = new Damage
+                
+
+                if(enemy != null)
                 {
-                    damageAmount = damage,
-                    origin = transform.position,
-                    pushForce = 1,
-                };
+                int critDamage = damage * 2;
+
+                if(enemy.isFire)
+                {
+                    Damage dmg = new Damage
+                    {
+                        damageAmount = critDamage,
+                        origin = transform.position,
+                        pushForce = 1,
+                    };
+                    hitInfo.collider.SendMessage("ReceiveDamage", dmg);
+                    hitInfo.collider.SendMessage("ApplySlowEffect", 3f);
+                }
+                else
+                {
+                    Damage dmg = new Damage
+                    {
+                        damageAmount = damage,
+                        origin = transform.position,
+                        pushForce = 1,
+                    };
+
+                    hitInfo.collider.SendMessage("ReceiveDamage", dmg);
+                    hitInfo.collider.SendMessage("ApplySlowEffect", 3f);
+                }
                 //Debug.Log("damage done");
-                hitInfo.collider.SendMessage("ReceiveDamage", dmg);
-                hitInfo.collider.SendMessage("ApplySlowEffect", 3f);
+            }
             }
             DestroyProjectile();
             //Debug.Log("Collison happen");
+            
         }
 
 

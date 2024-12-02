@@ -11,6 +11,10 @@ public class NatureEnemy : Enemy
     public float chargeCooldown;
     private float chargeTimer;
     Vector3 detectedPlayerPosition;
+
+
+    public override bool isNature => true;
+    
     protected override void Start()
     {
         base.Start();

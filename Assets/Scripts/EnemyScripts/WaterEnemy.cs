@@ -12,6 +12,8 @@ public class WaterEnemy : Enemy
     private float[] bulletPattern = {0f, 45f, 90f, 135f, 180f, -45f, -90f, -135f};
     private float angleMod = 22.5f;
     private int angleFlag = 0;
+
+    public override bool isWater => true;
     
 
     protected override void Start()
