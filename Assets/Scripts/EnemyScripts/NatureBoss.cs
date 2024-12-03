@@ -176,7 +176,7 @@ public class NatureBoss : Enemy
                 startTimeBtwShots = 0.025f;
                 if (pauseAttack)
                 {
-                    if (Time.time - attackPatternTime < attackPattern2Cooldown)
+                    if (Time.time - attackPatternTime < attackPattern3Cooldown)
                     {
                         return;
                     }

@@ -7,6 +7,8 @@ public class Chest : Collectable
     public Sprite emptyChest;
     public int pesosAmount;
 
+    public GameObject[] possibleItems;
+
     protected override void OnCollect()
     {
         if(!collected)

@@ -157,7 +157,7 @@ MonoBehaviour:
   hitpoint: 25
   maxHitPoint: 25
   pushRecoverySpeed: 0.2
-  immuneTime: 0.25
+  immuneTime: 0.35
   ySpeed: 0.75
   xSpeed: 1
   spriteRenderer: {fileID: 0}

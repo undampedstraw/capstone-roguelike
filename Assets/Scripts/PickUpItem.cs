@@ -9,12 +9,12 @@ public class PickUpItem : MonoBehaviour
 
     private void Start()
     {
-        inventory = GameObject.Find("Player").GetComponent<Inventory>(); //change tag to "Player" later?
+        inventory = GameObject.Find("Player").GetComponent<Inventory>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Fighter")) //change tag to "Player" later
+        if (collision.CompareTag("Player")) //change tag to "Player" later
         {
             for (int i = 0; i < inventory.InvSlots.Length; i++)
             {

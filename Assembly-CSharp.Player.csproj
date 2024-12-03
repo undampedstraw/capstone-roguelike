@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\BulletScripts\EnemyBullets\EnemyFrozenBulletScript.cs" />
+    <Compile Include="Assets\Scripts\PickUpWeapon.cs" />
     <Compile Include="Assets\Scripts\MoverPlayer.cs" />
     <Compile Include="Assets\Scripts\HealingFountain.cs" />
     <Compile Include="Assets\Scripts\Chest.cs" />
@@ -77,12 +78,14 @@
     <Compile Include="Assets\Scripts\EnemyScripts\AirEnemy.cs" />
     <Compile Include="Assets\Scripts\Boss.cs" />
     <Compile Include="Assets\Scripts\DropItem.cs" />
+    <Compile Include="Assets\Scripts\EnemyScripts\FireEnemy.cs" />
     <Compile Include="Assets\Scripts\player.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\Collidable.cs" />
     <Compile Include="Assets\Scripts\MeleeWeapon.cs" />
     <Compile Include="Assets\Scripts\BulletScripts\EnemyBullets\EnemyBulletScript.cs" />
     <Compile Include="Assets\Scripts\Fighter.cs" />
+    <Compile Include="Assets\Scripts\WeapSlot.cs" />
     <Compile Include="Assets\Scripts\DontDestroy.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\CameraMotor.cs" />

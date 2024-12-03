@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Xml.Linq;
 using UnityEngine;
 
 public class MeleeAim : MonoBehaviour
@@ -18,6 +19,56 @@ public class MeleeAim : MonoBehaviour
     public GameObject airElement;
 
     private GameObject currentElement;
+
+    public string getCurrentElement()
+    {
+        if (currentElement == basicElement)
+        {
+            return "LightWeapon";
+        }
+        else if (currentElement == iceElement)
+        {
+            return "WaterWeapon";
+        }
+        else if (currentElement == fireElement)
+        {
+            return "FireWeapon";
+        }
+        else if (currentElement == natureElement)
+        {
+            return "NatureWeapon";
+        }
+        else
+        {
+            return "AirWeapon";
+        }
+    }
+    public void setCurrentElement(string element)
+    {
+        DeactivateAllElements();
+        if (element == "LightWeapon")
+        {
+            currentElement = basicElement;
+        }
+        else if (element == "WaterWeapon")
+        {
+            currentElement = iceElement;
+        }
+        else if (element == "FireWeapon")
+        {
+            currentElement = fireElement;
+        }
+        else if (element == "NatureWeapon")
+        {
+            currentElement = natureElement;
+        }
+        else if (element == "AirWeapon")
+        {
+            currentElement = airElement;
+        }
+        rangedWeapon = currentElement;
+        ActivateRangedWeapon();
+    }
 
     private void Start()
     {
