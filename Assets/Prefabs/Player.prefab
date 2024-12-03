@@ -905,7 +905,7 @@ GameObject:
   - component: {fileID: 1119167910247288156}
   m_Layer: 9
   m_Name: Player
-  m_TagString: Fighter
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1235,7 +1235,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slotFull: 00000000
+  weaponSlotFull: 0100000000
   InvSlots:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  WeaponSlots:
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -1574,7 +1581,7 @@ MonoBehaviour:
   rangedWeapon: {fileID: 3273861891154414608}
   meleeWeapon: {fileID: 229996511276184268}
   basicElement: {fileID: 3273861891154414608}
-  iceElement: {fileID: 7826555239018452250}
+  waterElement: {fileID: 7826555239018452250}
   fireElement: {fileID: 4055598236483131620}
   natureElement: {fileID: 8772453712312281657}
   airElement: {fileID: 6658548541460330463}

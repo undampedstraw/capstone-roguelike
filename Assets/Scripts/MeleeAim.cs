@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Xml.Linq;
 using UnityEngine;
 
 public class MeleeAim : MonoBehaviour
@@ -74,7 +75,7 @@ public class MeleeAim : MonoBehaviour
         Camera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         rangedWeapon.SetActive(false);
         DeactivateAllElements();
-        currentElement = waterElement;
+        currentElement = basicElement;
     }
 
     private void Update()
@@ -91,7 +92,7 @@ public class MeleeAim : MonoBehaviour
         if (rotationZ > 90 || rotationZ < -90)
         {
             weaponScale.y = -1;
-        } 
+        }
         else
         {
             weaponScale.y = 1;
