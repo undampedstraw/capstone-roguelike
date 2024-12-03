@@ -61,12 +61,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\BulletScripts\EnemyBullets\EnemyFrozenBulletScript.cs" />
+    <Compile Include="Assets\Scripts\PickUpWeapon.cs" />
     <Compile Include="Assets\Scripts\MoverPlayer.cs" />
     <Compile Include="Assets\Scripts\HealingFountain.cs" />
     <Compile Include="Assets\Scripts\Chest.cs" />
     <Compile Include="Assets\Scripts\Mover.cs" />
     <Compile Include="Assets\Scripts\Slot.cs" />
     <Compile Include="Assets\Scripts\Damage.cs" />
+    <Compile Include="Assets\Scripts\BulletScripts\PlayerBullets\NatureBulletScript.cs" />
     <Compile Include="Assets\Scripts\MeleeAim.cs" />
     <Compile Include="Assets\Scripts\Portal.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\NatureBoss.cs" />
@@ -77,15 +79,19 @@
     <Compile Include="Assets\Scripts\EnemyScripts\AirEnemy.cs" />
     <Compile Include="Assets\Scripts\Boss.cs" />
     <Compile Include="Assets\Scripts\DropItem.cs" />
+    <Compile Include="Assets\Scripts\EnemyScripts\FireEnemy.cs" />
     <Compile Include="Assets\Scripts\player.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\Collidable.cs" />
+    <Compile Include="Assets\Scripts\AirShooting.cs" />
     <Compile Include="Assets\Scripts\MeleeWeapon.cs" />
     <Compile Include="Assets\Scripts\BulletScripts\EnemyBullets\EnemyBulletScript.cs" />
     <Compile Include="Assets\Scripts\Fighter.cs" />
+    <Compile Include="Assets\Scripts\WeapSlot.cs" />
     <Compile Include="Assets\Scripts\DontDestroy.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\CameraMotor.cs" />
+    <Compile Include="Assets\Scripts\BulletScripts\PlayerBullets\AirBulletScript.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\Collectable.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\NatureEnemy.cs" />
@@ -96,6 +102,7 @@
     <Compile Include="Assets\Scripts\BulletScripts\PlayerBullets\BulletScript.cs" />
     <Compile Include="Assets\Scripts\UseHealthPotion.cs" />
     <Compile Include="Assets\Scripts\BulletScripts\PlayerBullets\FrozenBulletScript.cs" />
+    <Compile Include="Assets\Scripts\BulletScripts\PlayerBullets\FireBulletScript.cs" />
     <Compile Include="Assets\Scripts\Shooting.cs" />
     <Compile Include="Assets\Scripts\FloatingText.cs" />
   </ItemGroup>
