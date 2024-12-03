@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 420121979
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 452239482, guid: 4f3cc40c161fe7f439098b53c75f86f0, type: 3}
+  m_Sprite: {fileID: -54413196, guid: 4f3cc40c161fe7f439098b53c75f86f0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -122,7 +122,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.16, y: 0.16}
+    oldSize: {x: 0.16161616, y: 0.16161616}
     newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -159,3 +159,8 @@ MonoBehaviour:
     maxNormalAngle: 0
   emptyChest: {fileID: 455825428, guid: 4f3cc40c161fe7f439098b53c75f86f0, type: 3}
   pesosAmount: 10
+  items:
+  - {fileID: 5928086539995879544, guid: da182cfb2845c834b975711fc1b7467f, type: 3}
+  - {fileID: 5928086539995879544, guid: ed75e0c32e27cb64d83f11b69da2a326, type: 3}
+  - {fileID: 5928086539995879544, guid: 9e61f998f469e4d42ae3e1fe6c942e9a, type: 3}
+  - {fileID: 5928086539995879544, guid: ae07f5cca906f4344bd845d8e70c337c, type: 3}
