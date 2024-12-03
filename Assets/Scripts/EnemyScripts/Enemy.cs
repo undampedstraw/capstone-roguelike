@@ -14,6 +14,8 @@ public class Enemy : Mover
     protected bool collidingWithPlayer;
     protected Transform playerTransform;
     protected Vector3 startingPosition;
+
+    public GameObject[] itemDrops;
     
     public virtual bool isFire { get; protected set; } = false;
     public virtual bool isWater { get; protected set; } = false;
@@ -64,8 +66,14 @@ public class Enemy : Mover
     protected override void Death()
     {
         Destroy(gameObject);
-        GameManager.instance.GrantXp(xpValue);
-        GameManager.instance.ShowText("+" + xpValue + " xp", 30, Color.magenta, transform.position, Vector3.up * 40, 1.0f);
+        //GameManager.instance.GrantXp(xpValue);
+        //GameManager.instance.ShowText("+" + xpValue + " xp", 30, Color.magenta, transform.position, Vector3.up * 40, 1.0f);
+        float itemDropChance = UnityEngine.Random.Range(0f, 1f);
+        if(itemDropChance <= 0.5f)
+        {
+            Instantiate(itemDrops[0], transform.position, Quaternion.identity);
+        }
+        //UnityEngine.Debug.Log(itemDropChance);
     }
 
     protected virtual void followPlayer()

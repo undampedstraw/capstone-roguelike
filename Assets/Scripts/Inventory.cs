@@ -39,7 +39,6 @@ public class Inventory : MonoBehaviour
     {
         handleItemInventory();
         handleWeaponInventory();
-
     }
 
     private void handleItemInventory()
@@ -80,7 +79,7 @@ public class Inventory : MonoBehaviour
                 selectedWeaponSlot++;
 
             }
-            UnityEngine.Debug.Log(selectedWeaponSlot);
+            //UnityEngine.Debug.Log(selectedWeaponSlot);
 
         }
         else if(Input.GetAxis("Mouse ScrollWheel") < 0f)
@@ -89,7 +88,7 @@ public class Inventory : MonoBehaviour
             {
                 selectedWeaponSlot--;
             }
-            UnityEngine.Debug.Log(selectedWeaponSlot);
+            //UnityEngine.Debug.Log(selectedWeaponSlot);
         }
         weaponSlotSelectSpritePos.anchoredPosition = new Vector2(weaponSlotPositions[selectedWeaponSlot], 495);
         if (WeaponSlots[selectedWeaponSlot].transform.childCount > 0)
@@ -101,7 +100,7 @@ public class Inventory : MonoBehaviour
                 int index = current_weapon.IndexOf("(Clone)");
                 current_weapon = current_weapon.Substring(0, index);
             }
-            UnityEngine.Debug.Log(playerWeapon.getCurrentElement());
+            //UnityEngine.Debug.Log(playerWeapon.getCurrentElement());
             if(current_weapon != playerWeapon.getCurrentElement())
             {
                 playerWeapon.setCurrentElement(current_weapon);
