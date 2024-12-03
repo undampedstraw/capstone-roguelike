@@ -177,6 +177,8 @@ MonoBehaviour:
   triggerLength: 1
   chaseLength: 5
   enemySpeed: 0.64
+  itemDrops:
+  - {fileID: 5928086539995879544, guid: e30697a0288ede842a740eaf60113bac, type: 3}
   filter:
     useTriggers: 0
     useLayerMask: 0
